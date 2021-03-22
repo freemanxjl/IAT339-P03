@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from 'react';
+import { Helmet } from 'react-helmet';
+import { HashRouter as Router } from 'react-router-dom';
+
+// import logo from './logo.svg';
+import Routes from './special/Routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Helmet>
+        <title>Freeman Liu Portfolio</title>
+        <meta content="Placeholder" name="description"/>
+      </Helmet>
+      <Router>
+        <Suspense fallback={<div></div>}><Routes/></Suspense>
+      </Router>
     </div>
   );
 }
