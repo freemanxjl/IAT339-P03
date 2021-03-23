@@ -1,0 +1,142 @@
+*{
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: TrickAsunder;
+  src: url('../trickasunder.ttf');
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: TrickAsunder, sans-serif;
+  overflow-wrap: break-word;
+  background: url('/src/asunderbackground-3.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 900;
+  max-width: 40rem;
+  line-height: 2.5rem;
+}
+
+h1{ font-size: 2.5rem; }
+h2{ font-size: 2.25rem; }
+h3{ font-size: 2rem; }
+h4{ font-size: 1.75rem; }
+h5{ font-size: 1.5rem; }
+h6{ font-size: 1.25rem; }
+
+li{
+  line-height: 1.4rem;
+}
+
+code{
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+
+p{
+  line-height: 1.8rem;
+}
+
+::placeholder{
+  color: #a5a39d; 
+}
+
+figure{
+  margin: 2rem;
+}
+
+figcaption{
+  max-width: 35rem;
+}
+
+/* Classes Styling */
+.element{
+  padding-bottom: 2rem;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+li{
+  line-height: 1.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+footer{
+  margin-top: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* For all items in navbar */
+.nav-props{
+  text-decoration: none !important;
+  cursor: pointer !important;
+  width: fit-content !important;
+  font-style: normal !important;
+  letter-spacing: 0em !important;
+  display: block !important;
+  outline: none !important;
+}
+
+/* For the site title specifically */
+.site-title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+/* For the nav buttons like 'Home' and 'About' */
+.nav-link-button{
+  padding: .1em 0 !important;
+  margin-left: 0.8rem !important;
+  margin-right: 0.8rem !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8em !important;
+}
+
+/* Underline property for the selected nav item and page */
+.underline{
+  background-repeat: repeat-x !important;
+  background-image: linear-gradient(to right,currentColor 100%,currentColor 0) !important;
+  background-size: 1px 1px !important;
+  background-position: 0 calc(100% - 0.1em) !important;
+}
+
+.btn{
+  font-weight: 300 !important;
+}
+
+/* Removes outline from buttons when clicked */
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Removes outline from hamburger button */
+.navbar-toggler {
+  outline: none !important;
+  border: none !important;
+}
+
+/* For footer purposes, we wrap everything in a container + flexbox */
+#container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1;
+}
+
