@@ -1,2 +1,0 @@
-(this["webpackJsonpiat339-p03"]=this["webpackJsonpiat339-p03"]||[]).push([[5],{33:function(t,i,c){"use strict";c.r(i);c(0);var e=c(2);i.default=function(){return Object(e.jsx)("div",{children:Object(e.jsx)("h1",{children:"Portfolio"})})}}}]);
-//# sourceMappingURL=5.a7d2b8c5.chunk.js.map
