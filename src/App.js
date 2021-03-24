@@ -9,10 +9,11 @@ import MainNavbar from './components/MainNavbar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
+import './css/interactive-elements.css';
 
 function App() {
   return (
-    <div>
+    <div id="container">
       <Helmet>
         <title>Freeman Liu Portfolio</title>
         <meta content="Placeholder" name="description"/>
@@ -20,7 +21,7 @@ function App() {
       <Router>
         <MainNavbar/>
         <Container>
-          <Suspense fallback={<div></div>}><Routes/></Suspense>
+          <div id="main-content"><Suspense fallback={<div></div>}><Routes/></Suspense></div>
         </Container>
       </Router>
     </div>

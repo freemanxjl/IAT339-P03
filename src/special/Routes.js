@@ -6,6 +6,8 @@ const Portfolio = lazy(() => import('../pages/Portfolio'));
 const ProjectOne = lazy(() => import('../pages/ProjectOne'));
 const ProjectTwo = lazy(() => import('../pages/ProjectTwo'));
 const StyleGuide = lazy(() => import('../pages/StyleGuide'));
+const About = lazy(() => import('../pages/About'));
+const Contact = lazy(() => import('../pages/Contact'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 function Routes(){
@@ -14,7 +16,9 @@ function Routes(){
             <Route exact path="/" component={Home}/>
             <Route path="/portfolio" component={Portfolio}/>
             <Route path="/portfolio/grandis-library" component={ProjectOne}/>
-            <Route path="/portfolio/project-two" component={ProjectTwo}/>
+            <Route path="/portfolio/tamooki" component={ProjectTwo}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact}/>
             <Route path="/style-guide" component={StyleGuide}/>
             <Route component={NotFound}/>
         </Switch>

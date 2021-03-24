@@ -1,0 +1,170 @@
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* BUTTON ELEMENTS */
+
+/* Main button for navigation on site, it is also used for all base button stylings on site*/
+.button-nav {
+    color: #ffffff;
+    background-color: #3a7a73;
+    border: none;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.button-nav:hover, .button-nav:focus{
+    background-color: #1a9486;
+}
+
+/* Different sizes for buttons */
+.button-sm{
+    padding: 0.15rem 1rem 0.15rem 1rem;
+    font-size: 1rem;
+}
+
+.button-md{
+    padding: 0.15rem 2rem 0.15rem 2rem;
+}
+
+.button-lg{
+    padding: 0.2rem 2.5rem 0.2rem 2.5rem;
+    font-size: 2rem;
+}
+
+/* Styling for the reset button */
+.reset-button {
+    background-color: transparent;
+    border: 0.15rem solid #b8232f;
+    color: #b8232f;
+}
+
+.reset-button:hover, .reset-button:focus{
+    background-color: #b8232f;
+    color: #ffffff;
+}
+
+/* INPUT ELEMENTS----------------- */
+
+/* Styling for the text input field label and the text input itself */
+.form-label, .form-input{
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Specific styling to be applied to label elements */
+.form-label{
+    font-weight: 500;
+}
+
+/* Specific styling to be applied to input elements */
+.form-input{
+    max-width: 15rem;
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0.75rem;
+    border: 0.2rem solid #b9b3a4;
+    border-radius: 0.5rem;
+    transition: border 0.2s ease-in;
+}
+
+.form-input:focus{
+    /* Custom focus color referenced from https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus */
+    outline: none;
+    border: 0.2rem solid #8ac6bf;
+}
+
+/* Styling for the radio button inputs */
+.form-radio-label{
+    margin-right: 0.5rem;
+}
+
+/* Special styling to be applied on top of .form-input for 'select' elements */
+select.form-input{
+    padding: 0.3rem 1.5rem 0.3rem 0.5rem;
+}
+
+/* Wrapper to group similar elements so they are wrapped responsively */
+.form-wrapper{
+    display: inline-block;
+    margin: 0.25rem 1rem 0.25rem 0;
+}
+
+/* Special styling to be applied on top of .form-wrapper for 'fieldset' elements */
+fieldset.form-wrapper{
+    margin-top: 2rem;
+}
+
+/* Container to group form elements for responsive behavior */
+.form-container{
+    padding: 1rem 0 2rem 0;
+}
+
+/* Container to group the submit elements for forms for responsive behavior */
+.form-submit-container{
+    margin-top: 4rem;
+}
+
+/* IMAGE ELEMENTS----------------- */
+
+/* Different sizes for images */
+.image-xs{
+    max-width: 15%;
+    height: auto;
+}
+
+.image-sm{
+    max-width: 25%;
+    height: auto;
+}
+
+.image-md{
+    max-width: 50%;
+    height: auto;
+}
+
+.image-lg{
+    max-width: 75%;
+    height: auto;
+}
+
+.image-xl{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+
+@media( max-width: 900px){
+    .image-xs{
+        max-width: 25%;
+    }
+
+    .image-sm{
+        max-width: 50%;
+    }
+
+    .image-md{
+        max-width: 75%;
+    }
+
+    .image-lg{
+        max-width: 100%;
+    }
+}
+
+@media( max-width: 540px){
+    .image-xs{
+        max-width: 50%;
+    }
+
+    .image-sm{
+        max-width: 75%;
+    }
+
+    .image-md{
+        max-width: 85%;
+    }
+}

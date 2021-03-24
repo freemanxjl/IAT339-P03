@@ -14,7 +14,7 @@ body {
   background: url('/src/asunderbackground-3.png');
   background-repeat: repeat-y;
   background-size: 100% auto;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 900;
   max-width: 40rem;
   line-height: 2.5rem;
+  letter-spacing: 0.2rem;
 }
 
 h1{ font-size: 2.5rem; }
@@ -63,7 +64,7 @@ figcaption{
   padding-bottom: 2rem;
   border-top-width: 0.15rem;
   border-top-style: solid;
-  border-top-color: black;
+  border-top-color: #ffffff;
 }
 
 li{
@@ -77,44 +78,60 @@ footer{
   padding-bottom: 2.5rem;
 }
 
+.navbar{
+  background: linear-gradient(to bottom, #000000 65%, transparent);
+  padding-bottom: 2rem;
+  opacity: 95%;
+}
+
 /* For all items in navbar */
 .nav-props{
-  text-decoration: none !important;
-  cursor: pointer !important;
-  width: fit-content !important;
-  font-style: normal !important;
-  letter-spacing: 0em !important;
-  display: block !important;
-  outline: none !important;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  font-style: normal;
+  letter-spacing: 0em;
+  display: block;
+  outline: none;
+}
+
+.nav-props:hover{
+  text-decoration: none;
 }
 
 /* For the site title specifically */
 .site-title{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 900;
   font-size: 2.5rem;
 }
 
 /* For the nav buttons like 'Home' and 'About' */
 .nav-link-button{
-  padding: .1em 0 !important;
-  margin-left: 0.8rem !important;
-  margin-right: 0.8rem !important;
-  font-size: 1.1rem !important;
-  line-height: 1.8em !important;
+  color: #ffffff;
+  padding: .2rem 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+.nav-link-button:hover{
+  color: violet;
 }
 
 /* Underline property for the selected nav item and page */
 .underline{
-  background-repeat: repeat-x !important;
-  background-image: linear-gradient(to right,currentColor 100%,currentColor 0) !important;
-  background-size: 1px 1px !important;
-  background-position: 0 calc(100% - 0.1em) !important;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to right,#ffffff 100%,#ffffff 0);
+  background-size: 1px 1px;
+  background-position: 0 calc(100%);
 }
 
 .btn{
-  font-weight: 300 !important;
+  font-weight: 300;
 }
 
 /* Removes outline from buttons when clicked */
@@ -125,18 +142,32 @@ footer{
 
 /* Removes outline from hamburger button */
 .navbar-toggler {
-  outline: none !important;
-  border: none !important;
+  outline: none;
+  border: none;
+}
+
+/* Hamburger icon */
+.navbar-toggler-icon{
+  background-image: url("/src/menu-white-18dp.svg") !important;
+  background-size: 2.5rem 2.5rem;
 }
 
 /* For footer purposes, we wrap everything in a container + flexbox */
 #container {
   display: flex;
   min-height: 100vh;
+  margin-top: 10rem;
   flex-direction: column;
 }
 
 #main-content {
   flex: 1;
+}
+
+@media(max-width: 991px){
+  .navbar{
+    background: linear-gradient(to bottom, #000000 80%, transparent);
+    padding-bottom: 2.8rem;
+  }
 }
 
