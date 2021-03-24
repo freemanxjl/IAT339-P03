@@ -23,7 +23,7 @@ function MainNavbar(props) {
             <div className="mr-auto"/>
             <Nav>
             <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/style-guide" onClick={() => setExpanded(false)}>Style Guide</NavLink>
-            <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/contact5" onClick={() => setExpanded(false)}>Contact</NavLink>
+            <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/contact" onClick={() => setExpanded(false)}>Contact</NavLink>
             <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/about" onClick={() => setExpanded(false)}>About</NavLink>
             <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/portfolio" onClick={() => setExpanded(false)}>Portfolio</NavLink>
             </Nav>

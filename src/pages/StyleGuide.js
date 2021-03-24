@@ -1,18 +1,19 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function StyleGuide() {
     return (
       <div>
         {/* INTERACTIVE ELEMENTS SECTION // */}
-        <section id="interactive_elements">
+        <section id="interactive-elements">
           <h2>Interactive Elements</h2>
           <section className="element">
             <h3>In-text Link</h3>
             <h4>Sample code:</h4>
             <code>&lt;a href="#"&gt;This is a link&lt;/a&gt;</code>
             <h4>Rendered element:</h4>
-            <Button variant="link">This is a link</Button>
+            <Button variant="link" className="link">This is a link</Button>
           </section>
           {/* Default Button styling section */}
           <section className="element">
@@ -40,7 +41,6 @@ function StyleGuide() {
           <section className="element">
             <h3>Submit/Reset Buttons</h3>
             <p>A Submit/Reset Button is a button that when clicked will perform an action. They are a special type of Navigation Button thus they also use the same sizing stylings</p>
-            <p>When hovered, these functional buttons do not have any animations when hovered to differentiate from Navigation Link buttons</p>
             <h4>CSS selector:</h4>
             <p>.submit-button .reset-button</p>
             <h4>CSS combined element selector:</h4>
@@ -99,7 +99,15 @@ function StyleGuide() {
             <code>&lt;a href="#"&gt;&lt;img class="image-xs" src="images/matcha-cookies.png" alt="Illustration of a cat head"/&gt;&lt;/a&gt;</code>
             {/* Image used is made by me */}
             <h4>Rendered element:</h4>
-            <Button variant="link"><img className="image-xl" src={`${process.env.PUBLIC_URL}/cookie.png`} alt="Cookie"/></Button>
+            <div className="grid-wrapper">
+              <Link to="/style-guide">
+                  <Image className="grid-image" src={`${process.env.PUBLIC_URL}/snackingcat.png`} alt="Snacking Cat"/>
+                  <div className="grid-overlay"/>
+                  <div className="grid-text">
+                      <h3 className="grid-title">Sample Text</h3>
+                  </div>
+              </Link>
+            </div>
           </section>
         </section>
         {/* // INTERACTIVE ELEMENTS SECTION */}
@@ -151,9 +159,9 @@ function StyleGuide() {
             </ol>
           </section>
         </section>
-        {/* // TEXT ELEMENTS SECTION */}
+
         {/* COMBINED ELEMENTS SECTION // */}
-        <section id="combined_elements">
+        <section id="combined-elements">
           <h2>Combined Elements</h2>
           <section className="element">
             <h3>Main Navigation</h3>

@@ -47,24 +47,32 @@ p{
   line-height: 1.8rem;
 }
 
+a, .link{
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: underline;
+  transition: none;
+}
+
+a:hover, .link:hover{
+  color: violet;
+}
+
 ::placeholder{
   color: #a5a39d; 
 }
 
-figure{
-  margin: 2rem;
-}
-
-figcaption{
-  max-width: 35rem;
-}
-
 /* Classes Styling */
 .element{
-  padding-bottom: 2rem;
+  padding: 2rem;
   border-top-width: 0.15rem;
   border-top-style: solid;
   border-top-color: #ffffff;
+  background: #000000;
+}
+
+#interactive-elements, #combined-elements{
+  margin-top: 5rem;
 }
 
 li{
@@ -81,7 +89,7 @@ footer{
 .navbar{
   background: linear-gradient(to bottom, #000000 65%, transparent);
   padding-bottom: 2rem;
-  opacity: 95%;
+  opacity: 0.95;
 }
 
 /* For all items in navbar */
@@ -107,6 +115,10 @@ footer{
   font-size: 2.5rem;
 }
 
+.site-title:hover{
+  color: turquoise;
+}
+
 /* For the nav buttons like 'Home' and 'About' */
 .nav-link-button{
   color: #ffffff;
@@ -116,10 +128,6 @@ footer{
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.8rem;
-}
-
-.nav-link-button:hover{
-  color: violet;
 }
 
 /* Underline property for the selected nav item and page */
@@ -166,7 +174,7 @@ footer{
 
 @media(max-width: 991px){
   .navbar{
-    background: linear-gradient(to bottom, #000000 80%, transparent);
+    background: linear-gradient(to bottom, #000000 83%, transparent);
     padding-bottom: 2.8rem;
   }
 }

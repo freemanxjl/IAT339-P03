@@ -55,30 +55,22 @@
     margin-top: 0.5rem;
 }
 
-/* Specific styling to be applied to label elements */
-.form-label{
-    font-weight: 500;
-}
-
 /* Specific styling to be applied to input elements */
 .form-input{
     max-width: 15rem;
     width: 100%;
-    padding: 0.5rem 0 0.5rem 0.75rem;
+    padding: 0.05rem 0 0.05rem 0.7rem;
     border: 0.2rem solid #b9b3a4;
-    border-radius: 0.5rem;
-    transition: border 0.2s ease-in;
 }
 
 .form-input:focus{
-    /* Custom focus color referenced from https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus */
     outline: none;
-    border: 0.2rem solid #8ac6bf;
+    border: 0.2rem solid #e83e8c;
 }
 
 /* Styling for the radio button inputs */
 .form-radio-label{
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0 0.5rem;
 }
 
 /* Special styling to be applied on top of .form-input for 'select' elements */
@@ -100,11 +92,6 @@ fieldset.form-wrapper{
 /* Container to group form elements for responsive behavior */
 .form-container{
     padding: 1rem 0 2rem 0;
-}
-
-/* Container to group the submit elements for forms for responsive behavior */
-.form-submit-container{
-    margin-top: 4rem;
 }
 
 /* IMAGE ELEMENTS----------------- */
@@ -133,6 +120,67 @@ fieldset.form-wrapper{
 .image-xl{
     max-width: 100%;
     height: auto;
+}
+
+.image-link{
+    display: inline-block;
+    overflow: hidden;  
+}
+
+.image-link img{
+    transition: transform .4s;
+}
+
+.image-link:hover img{
+    transform: scale(1.3);
+    transform-origin: 50% 50%;
+}
+
+.grid-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2a2829;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+/* Wrapper for our grid item */
+.grid-wrapper{
+    max-width: 100%;
+    width: fit-content;
+    margin: 1rem;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Text container */
+.grid-text{
+    color: #ffffff;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 3;
+}
+
+/* Actual text */
+.grid-title{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-size: 1.64rem;
+    text-align: center;
+}
+
+/* Removes overlay and text on hover to match old design */
+.grid-wrapper:hover .grid-overlay, .grid-wrapper:hover .grid-text{
+    opacity: 0;
+    transition: opacity ease 200ms;
 }
 
 /* Media Queries */
