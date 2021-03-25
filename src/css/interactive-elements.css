@@ -18,6 +18,8 @@
   
 .button-nav:hover, .button-nav:focus{
     background-color: #1a9486;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* Different sizes for buttons */
@@ -68,6 +70,11 @@
     border: 0.2rem solid #e83e8c;
 }
 
+.form-textarea{
+    max-width: 25rem;
+    min-height: 5rem;
+}
+
 /* Styling for the radio button inputs */
 .form-radio-label{
     margin: 0 0.5rem 0 0.5rem;
@@ -87,6 +94,17 @@ select.form-input{
 /* Special styling to be applied on top of .form-wrapper for 'fieldset' elements */
 fieldset.form-wrapper{
     margin-top: 2rem;
+}
+
+/* Container to group form elements for responsive behavior */
+.form-container{
+    padding: 1rem 0 2rem 0;
+}
+
+/* Wrapper to group similar elements so they are wrapped responsively */
+.form-wrapper{
+    display: inline-block;
+    margin: 0.25rem 1rem 0.25rem 0;
 }
 
 /* Container to group form elements for responsive behavior */
@@ -142,19 +160,27 @@ fieldset.form-wrapper{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #2a2829;
+    background-color: #131212;
     opacity: 0.5;
     z-index: 2;
 }
 
+/* Shadow from https://css-tricks.com/almanac/properties/b/box-shadow/ */
 /* Wrapper for our grid item */
 .grid-wrapper{
     max-width: 100%;
     width: fit-content;
-    margin: 1rem;
     height: auto;
     position: relative;
+    margin: 1rem;
     z-index: 1;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.5),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
 /* Text container */
@@ -162,7 +188,7 @@ fieldset.form-wrapper{
     color: #ffffff;
     position: absolute;
     top: 45%;
-    left: 0;
+    left: 8%;
     height: fit-content;
     width: 100%;
     z-index: 3;
@@ -173,7 +199,8 @@ fieldset.form-wrapper{
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
-    font-size: 1.64rem;
+    font-size: 4rem;
+    font-weight: 500;
     text-align: center;
 }
 

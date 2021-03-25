@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Form, Image } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 function StyleGuide() {
     return (
@@ -34,9 +35,9 @@ function StyleGuide() {
               &lt;a class="button-nav button-lg" href="#"&gt;Default Button&lt;/a&gt;
             </code>
             <h4>Rendered element:</h4>
-            <button className="button-nav button-sm" href="#">Default Button</button>
-            <button className="button-nav button-md" href="#">Default Button</button>
-            <button className="button-nav button-lg" href="#">Default Button</button>
+            <Link className="button-nav button-sm" to="#">Default Button</Link>
+            <Link className="button-nav button-md" to="#">Default Button</Link>
+            <Link className="button-nav button-lg" to="#">Default Button</Link>
           </section>
           <section className="element">
             <h3>Submit/Reset Buttons</h3>
@@ -101,7 +102,7 @@ function StyleGuide() {
             <h4>Rendered element:</h4>
             <div className="grid-wrapper">
               <Link to="/style-guide">
-                  <Image className="grid-image" src={`${process.env.PUBLIC_URL}/snackingcat.png`} alt="Snacking Cat"/>
+                  <Image className="grid-image" src={`${process.env.PUBLIC_URL}/sellas.png`} alt="Snacking Cat"/>
                   <div className="grid-overlay"/>
                   <div className="grid-text">
                       <h3 className="grid-title">Sample Text</h3>
@@ -191,19 +192,79 @@ function StyleGuide() {
               &lt;/div&gt;<br />
               &lt;/div&gt;
             </code>
-            {/* Code at the moment is not efficient as header-link items need to appear twice */}
-            {/* NOTE: <div class="main-header"> is used instead of <header> as current header is
-            styled with position: fixed, on real site it should use <header> instead */}
+
             <h4>Rendered element:</h4>
+            <div className="style-guide-nav">
+              <Navbar collapseOnSelect expand="lg">
+                <Navbar.Brand>
+                  <Link className="site-title nav-props" to="/style-guide">
+                    FREEMAN LIU
+                  </Link>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                  <div className="mr-auto"/>
+                  <Nav>
+                  <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/style-guide">Style Guide</NavLink>
+                  <NavLink className="nav-link-button nav-props" to="/style-guide">Contact</NavLink>
+                  <NavLink className="nav-link-button nav-props" to="/style-guide">About</NavLink>
+                  <NavLink className="nav-link-button nav-props" to="/style-guide">Portfolio</NavLink>
+                  </Nav>
+                  </Navbar.Collapse>
+              </Navbar>
+            </div>
           </section>
 
           <section className="element">
-            <h3>Contact Form</h3>
-            <h4>CSS selector:</h4>
-            <h4>Sample code:</h4>
-            <code>
+              <h3>Contact Form</h3>
+              <h4>CSS selector:</h4>
+              <p>.contact-form</p>
+              <h5>CSS combined element selector</h5>
+              <p>.form-container .form-wrapper .form-label .form-input .form-textarea</p>
+              <h4>Sample code:</h4>
+              <code>
+              &lt;div className="contact-form"&gt;<br/>
+              &lt;form&gt;<br/>
+              &lt;div className="form-container"&gt;<br/>
+              &lt;span className="form-wrapper"&gt;<br/>
+              &lt;label className="form-label" htmlFor="contact-first-name"&gt;First name&lt;/label&gt;<br/>
+              &lt;input className="form-input" type="text" id="contact-first-name"/&gt;<br/>
+              &lt;/span&gt;<br/>
+              &lt;span className="form-wrapper"&gt;<br/>
+              &lt;label className="form-label" htmlFor="contact-last-name"&gt;Last name&lt;/label&gt;<br/>
+              &lt;input className="form-input" type="text" id="contact-last-name"/&gt;<br/>
+              &lt;/span&gt;<br/>
+              &lt;label className="form-label" htmlFor="contact-email"&gt;Email&lt;/label&gt;<br/>
+              &lt;input className="form-input" type="text" id="contact-email"/&gt;<br/>
+              &lt;label className="form-label" htmlFor="contact-message"&gt;Message&lt;/label&gt;<br/>
+              &lt;textarea className="form-input form-textarea" id="contact-message"/&gt;<br/>
+              &lt;/div&gt;<br/>
+              &lt;input type="submit" className="button-nav button-md submit-button" value="Submit"/&gt;<br/>
+              &lt;/form&gt;<br/>
+              &lt;/div&gt;
             </code>
             <h4>Rendered element:</h4>
+            <div className="contact-form">
+              <form>
+                  <div className="form-container">
+                      <span className="form-wrapper">
+                          <label className="form-label" htmlFor="contact-first-name">First name*</label>
+                          <input className="form-input" type="text" id="contact-first-name"/>
+                      </span>
+                      <span className="form-wrapper">
+                          <label className="form-label" htmlFor="contact-last-name">Last name*</label>
+                          <input className="form-input" type="text" id="contact-last-name"/>
+                      </span>
+                      <label className="form-label" htmlFor="contact-email">Email*</label>
+                      <input className="form-input" type="text" id="contact-email"/>
+                      <label className="form-label" htmlFor="contact-subject">Subject</label>
+                      <input className="form-input" type="text" id="contact-subject"/>
+                      <label className="form-label" htmlFor="contact-message">Message*</label>
+                      <textarea className="form-input form-textarea" id="contact-message"/>
+                  </div>
+                  <input type="submit" className="button-nav button-md submit-button" value="Submit"/>
+              </form>
+            </div>
           </section>
         </section>
       </div>

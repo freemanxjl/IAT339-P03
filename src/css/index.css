@@ -26,12 +26,12 @@ h1, h2, h3, h4, h5, h6{
   letter-spacing: 0.2rem;
 }
 
-h1{ font-size: 2.5rem; }
-h2{ font-size: 2.25rem; }
-h3{ font-size: 2rem; }
-h4{ font-size: 1.75rem; }
-h5{ font-size: 1.5rem; }
-h6{ font-size: 1.25rem; }
+h1{ font-size: 3rem; }
+h2{ font-size: 2rem; }
+h3{ font-size: 1.8rem; }
+h4{ font-size: 1.5rem; }
+h5{ font-size: 1.3rem; }
+h6{ font-size: 1.1rem; }
 
 li{
   line-height: 1.4rem;
@@ -55,7 +55,7 @@ a, .link{
 }
 
 a:hover, .link:hover{
-  color: violet;
+  color: rgb(248, 44, 187);
 }
 
 ::placeholder{
@@ -164,7 +164,7 @@ footer{
 #container {
   display: flex;
   min-height: 100vh;
-  margin-top: 10rem;
+  padding-top: 10rem;
   flex-direction: column;
 }
 
