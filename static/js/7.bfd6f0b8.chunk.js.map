@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/Portfolio.js"],"names":["Portfolio"],"mappings":"+GAAA,uBASeA,UAPf,WACI,OACI","file":"static/js/7.bfd6f0b8.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nfunction Portfolio() {\r\n    return (\r\n        <div>\r\n        </div>\r\n    )\r\n};\r\n\r\nexport default Portfolio\r\n"],"sourceRoot":""}
