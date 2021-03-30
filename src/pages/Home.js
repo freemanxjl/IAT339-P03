@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Portfolio from '../components/Portfolio';
 

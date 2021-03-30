@@ -2,7 +2,6 @@ import React, {lazy} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 const Home = lazy(() => import('../pages/Home'));
-const Portfolio = lazy(() => import('../components/Portfolio'));
 const ProjectOne = lazy(() => import('../pages/ProjectOne'));
 const ProjectTwo = lazy(() => import('../pages/ProjectTwo'));
 const StyleGuide = lazy(() => import('../pages/StyleGuide'));

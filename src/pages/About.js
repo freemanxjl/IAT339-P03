@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { NavLink } from '../components/InteractiveElements';
 
 const BackgroundOverlay = styled(Image)`
     position: absolute;
@@ -44,7 +44,7 @@ function About() {
                 <Col>
                     <h1>Hello there, I'm Freeman</h1>
                     <p>Nice to meet you! I am an aspiring web developer currently studying in Computing Science and Interactive Arts + Technology at Simon Fraser University. I am passionate about designing with intention and usability in mind. Simplicity is the name and functionality is the game. Human-centered design is the core of my philosophy and an important aspect to every project I have worked on.</p>
-                    <Link className="button-nav button-lg" to="/contact">Let's chat!</Link>
+                    <NavLink lg to="/contact">Let's chat!</NavLink>
                 </Col>
                 <Col>
                 </Col>

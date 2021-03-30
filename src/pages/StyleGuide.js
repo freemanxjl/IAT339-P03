@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Form, Image } from 'react-bootstrap';
 import { Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import TextLink, {FormRadioInput, FormTextInput, ImageLink, NavLink, ResetButton} from '../components/InteractiveElements';
 
 function StyleGuide() {
     return (
@@ -11,104 +12,110 @@ function StyleGuide() {
           <h2>Interactive Elements</h2>
           <section className="element">
             <h3>In-text Link</h3>
+            <p>A link component to be used when within text</p>
+            <h4>Props:</h4>
+            <ul>
+              <li>link - URL for external websites</li>
+              <li>siteLink - route for a page within site</li>
+            </ul>
             <h4>Sample code:</h4>
-            <code>&lt;a href="#"&gt;This is a link&lt;/a&gt;</code>
+            <code>
+              &lt;TextLink link="https://www.sfu.ca/~fla54/iat339/p1/"&gt;This is a link&lt;/a&gt;<br/>
+              &lt;TextLink siteLink="/style-guide"&gt;This is another link&lt;/a&gt;
+            </code>
             <h4>Rendered element:</h4>
-            <Button variant="link" className="link">This is a link</Button>
+            <TextLink link="https://www.sfu.ca/~fla54/iat339/p1/">This is a link</TextLink>{' '}
+            <TextLink siteLink="/style-guide">This is another link</TextLink>
           </section>
           {/* Default Button styling section */}
           <section className="element">
             <h3>Navigation Link</h3>
-            <p>A Navigation Link is a button that when clicked will navigate to another page</p>
-            <p>By default, each button element will be a small button if no size is assigned. Button sizes are split into small, medium, and large and can be assigned by using the following CSS selectors:</p>
+            <p>A Navigation Link is a button that when clicked will navigate to another page within the site</p>
+            <p>The size of the button can be adjusted by including a keyword as a prop. There are 3 possible sizes:</p>
             <ul>
-              <li>.button-sm -&gt; Small Button</li>
-              <li>.button-md -&gt; Medium Button</li>
-              <li>.button-lg -&gt; Large Button</li>
+              <li>sm - small</li>
+              <li>md - medium</li>
+              <li>lg - large</li>
             </ul>
-            <h4>CSS selector:</h4>
-            <p>.button-nav</p>
+            <h4>Props:</h4>
+            <ul>
+              <li>Utilizes same props as Link component from react-router-dom</li>
+            </ul>
             <h4>Sample code:</h4>
             <code>
-              &lt;a class="button-nav button-sm" href="#"&gt;Default Button&lt;/a&gt;<br />
-              &lt;a class="button-nav button-md" href="#"&gt;Default Button&lt;/a&gt;<br />
-              &lt;a class="button-nav button-lg" href="#"&gt;Default Button&lt;/a&gt;
+              &lt;NavLink sm to="/style-guide"&gt;Default Button&lt;/a&gt;<br/>
+              &lt;NavLink md to="/style-guide"&gt;Default Button&lt;/a&gt;<br/>
+              &lt;NavLink lg to="/style-guide"&gt;Default Button&lt;/a&gt;<br/>
             </code>
             <h4>Rendered element:</h4>
-            <Link className="button-nav button-sm" to="#">Default Button</Link>
-            <Link className="button-nav button-md" to="#">Default Button</Link>
-            <Link className="button-nav button-lg" to="#">Default Button</Link>
+            <NavLink sm to="/style-guide">Default Button</NavLink>
+            <NavLink md to="/style-guide">Default Button</NavLink>
+            <NavLink lg to="/style-guide">Default Button</NavLink>
           </section>
           <section className="element">
             <h3>Submit/Reset Buttons</h3>
-            <p>A Submit/Reset Button is a button that when clicked will perform an action. They are a special type of Navigation Button thus they also use the same sizing stylings</p>
-            <h4>CSS selector:</h4>
-            <p>.submit-button .reset-button</p>
-            <h4>CSS combined element selector:</h4>
-            <p>.button-nav</p>
+            <p>A Submit/Reset Button is a button for forms that when clicked will perform an action.</p>
+            <p>The same sizings used for Navigation Links can be used for Submit/Reset buttons as well</p>
+            <p>For the rendered element, NavLink is used as it is not within a form. For the proper component, substitute your form submit element with SubmitButton</p>
             <h4>Sample code:</h4>
             <code>
-              &lt;a class="button-nav button-md submit-button" href="#"&gt;Submit Button&lt;/a&gt;<br />
-              &lt;a class="button-nav button-md reset-button" href="#"&gt;Reset Button&lt;/a&gt;
+              &lt;ResetButton md to="/style-guide"&gt;Submit Button&lt;/a&gt;<br />
+              &lt;SubmitButton type="submit" value="Submit"&gt;
             </code>
             <h4>Rendered element:</h4>
-            <button className="button-nav button-md reset-button" href="#">Reset Button</button>
-            <button className="button-nav button-md submit-button" href="#">Submit Button</button>
+            <ResetButton md to="/style-guide">Reset Button</ResetButton>
+            <NavLink md to="/style-guide">Submit Button</NavLink>
           </section>
           <section className="element">
             <h3>Text Input Field with Label</h3>
-            <h4>CSS selector:</h4>
-            <p>.form-label .form-input</p>
+            <p>A component for forms to insert a label and input of type text</p>
+            <h4>Props:</h4>
+            <ul>
+              <li>formId - For the id to link label and input</li>
+              <li>label - Displays the label text given for the following input element</li>
+              <li>placeholder - Displays the placeholder text given for the following input element</li>
+            </ul>
             <h4>Sample code:</h4>
             <code>
-              &lt;label class="form-label" for="form-input"&gt;This is a label&lt;/label&gt;<br />
-              &lt;input class="form-input" type="text" id="form-input"/&gt;
+              &lt;FormTextInput formId="form-input" label="This is a label" placeholder="Placeholder"&gt;
             </code>
             <h4>Rendered element:</h4>
-            <label className="form-label" htmlFor="form-input">This is a label</label>
-            <input className="form-input" type="text" id="form-input" placeholder="Placeholder" />
+            <FormTextInput formId="form-input" label="This is a label" placeholder="Placeholder"/>
           </section>
           <section className="element">
             <h3>Radio Button with Label</h3>
-            <h4>CSS selector:</h4>
-            <p>.form-radio-label</p>
+            <p>A component for forms to insert a label and input of type radio button</p>
+            <h4>Props:</h4>
+            <ul>
+              <li>formId - For the id to link label and input</li>
+              <li>label - Displays the label text given for the following input element</li>
+              <li>name - For the name of the input to be associated with a value</li>
+              <li>value - For the value of the input to be associated with a name</li>
+            </ul>
             <h4>Sample code:</h4>
             <code>
-              &lt;input type="radio" id="form-radio-one" name="form-radio" value="form-radio-one"/&gt;<br />
-              &lt;label class="form-radio-label" for="form-radio-one"&gt;This is a radio button&lt;/label&gt;<br />
-              &lt;type="radio" id="form-radio-two" name="form-radio" value="form-radio-two"/&gt;<br />
-              &lt;label class="form-radio-label" for="form-radio-two"&gt;This is also a radio button&lt;/label&gt;
+              &lt;FormRadioInput formId="form-radio-one" label="This is a radio button" name="form-radio" value="form-radio-one"&gt;<br />
+              &lt;FormRadioInput formId="form-radio-two" label="This is also a radio button" name="form-radio" value="form-radio-two"&gt;
             </code>
             <h4>Rendered element:</h4>
-            {/* Referenced from https://www.w3schools.com/tags/att_input_type_radio.asp */}
-            <input type="radio" id="form-radio-one" name="form-radio" defaultValue="form-radio-one" />
-            <label className="form-radio-label" htmlFor="form-radio-one">This is a radio button</label>
-            <input type="radio" id="form-radio-two" name="form-radio" defaultValue="form-radio-two" />
-            <label className="form-radio-label" htmlFor="form-radio-two">This is also a radio button</label>
+            <FormRadioInput formId="form-radio-one" label="This is a radio button" name="form-radio" value="form-radio-one"/>
+            <FormRadioInput formId="form-radio-two" label="This is also a radio button" name="form-radio" value="form-radio-two"/>
           </section>
           <section className="element">
             <h3>Image as a Link</h3>
-            <p>An Image as a Link is a &lt;img&gt; element nested within an &lt;a&gt; element</p>
-            <p>Images have four different sizes and must have a size associated with them. Images can be assigned by using the following CSS selectors:</p>
+            <p>An image that when clicked navigates to a different page on the website. Mainly used as a navigation link to our portfolio projects</p>
+            <h4>Props:</h4>
             <ul>
-              <li>.image-xs -&gt; Extra Small Image</li>
-              <li>.image-sm -&gt; Small Image</li>
-              <li>.image-md -&gt; Medium Image</li>
-              <li>.image-lg -&gt; Large Image</li>
+              <li>imageName - name of image (without file extension .png) found within public folder</li>
+              <li>imageAlt - the alt tag for the image</li>
+              <li>text - the title to be overlayed on top of image</li>
+              <li>link - the route for a page within the site</li>
             </ul>
             <h4>Sample code:</h4>
-            <code>&lt;a href="#"&gt;&lt;img class="image-xs" src="images/matcha-cookies.png" alt="Illustration of a cat head"/&gt;&lt;/a&gt;</code>
+            <code>&lt;ImageLink imageName="grandis-library" imageAlt="Grandis Library" text="Sample Text" link="/style-guide"&gt;</code>
             {/* Image used is made by me */}
             <h4>Rendered element:</h4>
-            <div className="grid-wrapper">
-              <Link to="/style-guide">
-                  <Image className="grid-image" src={`${process.env.PUBLIC_URL}/sellas.png`} alt="Snacking Cat"/>
-                  <div className="grid-overlay"/>
-                  <div className="grid-text">
-                      <h3 className="grid-title">Sample Text</h3>
-                  </div>
-              </Link>
-            </div>
+            <ImageLink imageName="grandis-library" imageAlt="Grandis Library" text="Sample Text" link="/style-guide"/>
           </section>
         </section>
         {/* // INTERACTIVE ELEMENTS SECTION */}
@@ -166,31 +173,24 @@ function StyleGuide() {
           <h2>Combined Elements</h2>
           <section className="element">
             <h3>Main Navigation</h3>
-            <h4>CSS selector:</h4>
-            <p>.main-header, .header-icon, .header-title, .header-item-wrapper, .header-link</p>
             <h4>Sample code:</h4>
             <code>
-              &lt;div class="main-header"&gt;<br />
-              &lt;img class="header-icon" src="images/tamooki.svg" alt="Site Logo"&gt;<br />
-              &lt;p class="header-title"&gt;Tamooki&lt;/p&gt;<br />
-              &lt;nav class="header-item-wrapper&gt;<br />
-              &lt;a class="header-link"&gt;Link 1&lt;a/&gt;<br />
-              &lt;a class="header-link"&gt;Link 2&lt;a/&gt;<br />
-              &lt;a class="header-link"&gt;Link 3&lt;a/&gt;<br />
-              &lt;a class="header-link"&gt;Link 4&lt;a/&gt;<br />
-              &lt;/nav&gt;
-              &lt;div class="mobile-navbar"&gt;<br />
-              &lt;span class="dropdown-button"&gt;&lt;/span&gt;<br />
-              &lt;nav class="dropdown-menu"&gt;<br />
-              &lt;div class="dropdown-wrapper"&gt;<br />
-              &lt;a class="header-link" href="#"&gt;Link 1&lt;/a&gt;<br />
-              &lt;a class="header-link" href="#"&gt;Link 2&lt;/a&gt;<br />
-              &lt;a class="header-link" href="#"&gt;Link 3&lt;/a&gt;<br />
-              &lt;a class="header-link" href="#"&gt;Link 4&lt;/a&gt;<br />
-              &lt;/div&gt;<br />
-              &lt;/nav&gt;<br />
-              &lt;/div&gt;<br />
-              &lt;/div&gt;
+              &lt;Navbar collapseOnSelect expand="lg"&gt;<br/>
+              &lt;Navbar.Brand&gt;<br/>
+              &lt;Link className="site-title nav-props" to="/style-guide"&gt;<br/>
+              FREEMAN LIU<br/>
+              &lt;/Link&gt;<br/>
+              &lt;Navbar.Toggle aria-controls="responsive-navbar-nav"&gt;<br/>
+              &lt;Navbar.Collapse id="responsive-navbar-nav"&gt;<br/>
+              &lt;div className="mr-auto"&gt;<br/>
+              &lt;Nav&gt;<br/>
+              &lt;NavLink className="nav-link-button nav-props" activeClassName="underline" to="/style-guide"&gt;Style Guide&lt;/NavLink&gt;<br/>
+              &lt;NavLink className="nav-link-button nav-props" to="/style-guide"&gt;Contact&lt;/NavLink&gt;<br/>
+              &lt;NavLink className="nav-link-button nav-props" to="/style-guide"&gt;About&lt;/NavLink&gt;<br/>
+              &lt;NavLink className="nav-link-button nav-props" to="/style-guide"&gt;Portfolio&lt;/NavLink&gt;<br/>
+              &lt;/Nav&gt;<br/>
+              &lt;Navbar.Collapse&gt;<br/>
+              &lt;/Navbar&gt;
             </code>
 
             <h4>Rendered element:</h4>

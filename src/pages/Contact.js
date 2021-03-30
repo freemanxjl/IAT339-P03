@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { SubmitButton } from '../components/InteractiveElements';
 
 function Contact() {
     return (
@@ -28,7 +29,7 @@ function Contact() {
                                 <label className="form-label" htmlFor="contact-message">Message*</label>
                                 <textarea className="form-input form-textarea" id="contact-message"/>
                             </div>
-                            <input type="submit" className="button-nav button-md submit-button" value="Submit"/>
+                            <SubmitButton type="submit" value="Submit"/>
                         </form>
                     </div>
                 </Col>
