@@ -142,26 +142,33 @@ const GridText = styled.div`
     color: #ffffff;
     position: absolute;
     top: 45%;
-    left: 8%;
     height: fit-content;
     width: 100%;
     z-index: 3;
+    
+    @media( max-width: 350px){
+        top: 35%;
+    }
 `;
 
 const GridTitle = styled.h3`
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 500;
     text-align: center;
+
+    @media( max-width: 991px){
+        font-size: 2.5rem;
+    }
 `;
 
 export function ImageLink({imageName, imageAlt, text, link}){
     return(
         <GridWrapper className="grid-wrapper">
         <Link to={link}>
-            <Image src={`${process.env.PUBLIC_URL}/${imageName}.png`} alt={imageAlt}/>
+            <Image fluid src={`${process.env.PUBLIC_URL}/${imageName}.png`} alt={imageAlt}/>
             <GridOverlay className="grid-overlay"/>
             <GridText className="grid-text">
                 <GridTitle>{text}</GridTitle>
@@ -170,5 +177,36 @@ export function ImageLink({imageName, imageAlt, text, link}){
       </GridWrapper>
     )
 }
+
+export const ContentOverlay = styled.div`
+    background: rgba(0,0,0,0.75);
+    padding: 2rem;
+`;
+
+export const HomeContentOverlay = styled.div`
+    @media( max-width: 575px){
+        background: rgba(0,0,0,0.75);
+        padding: 2rem;
+    }
+`;
+
+export const BackgroundOverlay = styled(Image)`
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    @media( max-width: 800px){
+        opacity: 0;
+    }
+`;
+
+export const PortfolioHeader = styled.h1`
+    margin-top: 1rem;
+`;
+
+export const PortfolioContainer = styled.div`
+    margin-bottom: 15rem;
+`;
 
 export default TextLink;

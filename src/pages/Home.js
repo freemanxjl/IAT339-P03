@@ -1,14 +1,8 @@
 import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
 import styled from 'styled-components';
+import { ContentOverlay, BackgroundOverlay } from '../components/InteractiveElements';
 import Portfolio from '../components/Portfolio';
-
-const BackgroundOverlay = styled(Image)`
-    position: absolute;
-    bottom: auto;
-    right: 0;
-    z-index: -1;
-`;
 
 const StarOverlayOne = styled(Image)`
     position: absolute;
@@ -41,16 +35,16 @@ function Home() {
     return (
         <div>
             <Row>
-                <Col>
-                    <h1>Hey! I'm Freeman</h1>
-                    <h2>I am an aspiring web developer passionate in creating engaging, simple, and creative designs.</h2>
-                    {/* <Link className="button-nav button-lg" to="#">View Portfolio</Link> */}
-                    {/* <Link className="button-nav button-lg" to="#">Send A Message</Link> */}
+                <Col md={6}>
+                    <ContentOverlay>
+                        <h1>Hey! I'm Freeman</h1>
+                        <h2>I am an aspiring web developer passionate in creating engaging, simple, and creative designs.</h2>
+                    </ContentOverlay>
                 </Col>
-                <Col>
+                <Col md={6}>
+                    <Portfolio/>
                 </Col>
             </Row>
-            <Portfolio/>
             <BackgroundOverlay src={`${process.env.PUBLIC_URL}/swordofstars.png`}/>
             <StarOverlayOne src={`${process.env.PUBLIC_URL}/stars.png`}/>
             <StarOverlayTwo src={`${process.env.PUBLIC_URL}/stars.png`}/>

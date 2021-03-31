@@ -7,13 +7,15 @@ import SwiperCore, { Pagination, Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
+import { PortfolioHeader, NavLink, PortfolioContainer } from '../components/InteractiveElements';
 
 SwiperCore.use([Pagination, Navigation]);
 
 function ProjectTwo() {
     return (
-        <div>
-            <h1>Tamooki</h1>
+        <PortfolioContainer>
+            <NavLink sm to="/">Back to porfolio</NavLink>
+            <PortfolioHeader>Tamooki</PortfolioHeader>
             <h2>Role: Designer, Developer</h2>
             <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-1.png`} style={{margin: "1rem 0 2rem 0"}}/>
             <p>Tamooki Style Guide
@@ -59,7 +61,7 @@ The Tamooki Style Guide is an individual school project to create a style guide 
 
             <p>Prior to building the elements, I explored a bit with the branding components and the overall art direction. This included choosing the right typeface and colors that I wanted to represent my brand. My main inspiration for the site was from the game Animal Crossing. The vibrant, soft colors and relaxing tone of Animal Crossing was how I imagined the site to look like. From there, I explored similar websites and themes to help develop the right color pallet and choice of typeface. As well, I created several resources like potential products, a logo, and decorative elements to help establish my brand components and art direction further.</p>
             <p>Overall, I used this project as an opportunity to experiment with my usage of colors and try new ways to layout a site that I haven’t tried before. As well, I’ve always had an idea to open a cookie shop so this project was a way to flesh out what I wanted to create potentially in the future.</p>
-        </div>
+        </PortfolioContainer>
     )
 };
 
