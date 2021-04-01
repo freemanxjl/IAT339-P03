@@ -8,12 +8,16 @@ import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
 import { PortfolioHeader, NavLink, PortfolioContainer } from '../components/InteractiveElements';
+import { Helmet } from 'react-helmet';
 
 SwiperCore.use([Pagination, Navigation]);
 
 function ProjectTwo() {
     return (
         <PortfolioContainer>
+            <Helmet>
+                <title>Tamooki | Freeman Liu</title>
+            </Helmet>
             <NavLink sm to="/">Back to porfolio</NavLink>
             <PortfolioHeader>Tamooki</PortfolioHeader>
             <h2>Role: Designer, Developer</h2>

@@ -91,6 +91,31 @@ const FormInput = styled.input`
         outline: none;
         border: 0.2rem solid #e83e8c;
     }
+
+    @media( max-width: 530px){
+        max-width: 100%;
+    }
+`;
+
+const FormTextArea = styled.textarea`
+    display: block;
+    max-width: 25rem;
+    min-height: 5rem;
+    max-height: 20rem;
+    height: 10rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.05rem 0 0.05rem 0.7rem;
+    border: 0.2rem solid #b9b3a4;
+
+    ${this}:focus{
+        outline: none;
+        border: 0.2rem solid #e83e8c;
+    }
+
+    @media( max-width: 530px){
+        max-width: 100%;
+    }
 `;
 
 export function FormTextInput({formId, label, placeholder}){
@@ -107,6 +132,15 @@ export function FormRadioInput({formId, label, name, value}){
         <div>
             <input type="radio" id={formId} name={name} value={value}/>
             <FormRadioLabel htmlFor={formId}>{label}</FormRadioLabel>
+        </div>
+    )
+}
+
+export function FormTextAreaInput({formId, label, placeholder}){
+    return(
+        <div>
+            <FormLabel htmlFor={formId}>{label}</FormLabel>
+            <FormTextArea id={formId} placeholder={placeholder}/>
         </div>
     )
 }
@@ -181,6 +215,7 @@ export function ImageLink({imageName, imageAlt, text, link}){
 export const ContentOverlay = styled.div`
     background: rgba(0,0,0,0.75);
     padding: 2rem;
+    margin-bottom: 2rem;
 `;
 
 export const HomeContentOverlay = styled.div`

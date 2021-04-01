@@ -1,12 +1,17 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { Link, NavLink as RouterNavLink } from 'react-router-dom';
+import ContactForm from '../components/CombinedElements';
 
 import TextLink, {FormRadioInput, FormTextInput, ImageLink, NavLink, ResetButton} from '../components/InteractiveElements';
 
 function StyleGuide() {
     return (
       <div>
+        <Helmet>
+          <title>Style Guide | Freeman Liu</title>
+        </Helmet>
         {/* INTERACTIVE ELEMENTS SECTION // */}
         <section id="interactive-elements">
           <h2>Interactive Elements</h2>
@@ -175,7 +180,8 @@ function StyleGuide() {
             <h3>Main Navigation</h3>
             <h4>Sample code:</h4>
             <code>
-              &lt;Navbar collapseOnSelect expand="lg"&gt;<br/>
+              &lt;MainNavbar/&gt; Code below is what is found inside component<br/>
+              <br/>&lt;Navbar collapseOnSelect expand="lg"&gt;<br/>
               &lt;Navbar.Brand&gt;<br/>
               &lt;Link className="site-title nav-props" to="/style-guide"&gt;<br/>
               FREEMAN LIU<br/>
@@ -194,7 +200,7 @@ function StyleGuide() {
             </code>
 
             <h4>Rendered element:</h4>
-            <div className="style-guide-nav">
+            <div style={{backgroundColor: '#ffffff', border: '0.01rem #ffffff solid'}}>
               <Navbar collapseOnSelect expand="lg">
                 <Navbar.Brand>
                   <Link className="site-title nav-props" to="/style-guide">
@@ -205,10 +211,10 @@ function StyleGuide() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <div className="mr-auto"/>
                   <Nav>
-                  <NavLink className="nav-link-button nav-props" activeClassName="underline" to="/style-guide">Style Guide</NavLink>
-                  <NavLink className="nav-link-button nav-props" to="/style-guide">Contact</NavLink>
-                  <NavLink className="nav-link-button nav-props" to="/style-guide">About</NavLink>
-                  <NavLink className="nav-link-button nav-props" to="/style-guide">Portfolio</NavLink>
+                  <RouterNavLink className="nav-link-button nav-props" activeClassName="underline" to="/style-guide">Style Guide</RouterNavLink>
+                  <RouterNavLink className="nav-link-button nav-props" to="/style-guide">Contact</RouterNavLink>
+                  <RouterNavLink className="nav-link-button nav-props" to="/style-guide">About</RouterNavLink>
+                  <RouterNavLink className="nav-link-button nav-props" to="/style-guide">Portfolio</RouterNavLink>
                   </Nav>
                   </Navbar.Collapse>
               </Navbar>
@@ -216,55 +222,26 @@ function StyleGuide() {
           </section>
 
           <section className="element">
-              <h3>Contact Form</h3>
-              <h4>CSS selector:</h4>
-              <p>.contact-form</p>
-              <h5>CSS combined element selector</h5>
-              <p>.form-container .form-wrapper .form-label .form-input .form-textarea</p>
-              <h4>Sample code:</h4>
-              <code>
-              &lt;div className="contact-form"&gt;<br/>
-              &lt;form&gt;<br/>
-              &lt;div className="form-container"&gt;<br/>
-              &lt;span className="form-wrapper"&gt;<br/>
-              &lt;label className="form-label" htmlFor="contact-first-name"&gt;First name&lt;/label&gt;<br/>
-              &lt;input className="form-input" type="text" id="contact-first-name"/&gt;<br/>
-              &lt;/span&gt;<br/>
-              &lt;span className="form-wrapper"&gt;<br/>
-              &lt;label className="form-label" htmlFor="contact-last-name"&gt;Last name&lt;/label&gt;<br/>
-              &lt;input className="form-input" type="text" id="contact-last-name"/&gt;<br/>
-              &lt;/span&gt;<br/>
-              &lt;label className="form-label" htmlFor="contact-email"&gt;Email&lt;/label&gt;<br/>
-              &lt;input className="form-input" type="text" id="contact-email"/&gt;<br/>
-              &lt;label className="form-label" htmlFor="contact-message"&gt;Message&lt;/label&gt;<br/>
-              &lt;textarea className="form-input form-textarea" id="contact-message"/&gt;<br/>
-              &lt;/div&gt;<br/>
-              &lt;input type="submit" className="button-nav button-md submit-button" value="Submit"/&gt;<br/>
-              &lt;/form&gt;<br/>
-              &lt;/div&gt;
+            <h3>Contact Form</h3>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;ContactForm/&gt; Code below is what is found inside component<br/>
+              <br/>&lt;form&gt;<br/>
+              &lt;FormContainer&gt;<br/>
+              &lt;FormWrapper&gt;<br/>
+              &lt;FormTextInput formId="contact-first-name" label="First name*"&gt;<br/>
+              &lt;/FormWrapper&gt;<br/>
+              &lt;FormWrapper&gt;<br/>
+              &lt;FormTextInput formId="contact-last-name" label="Last name*"&gt;<br/>
+              &lt;/FormWrapper&gt;<br/>
+              &lt;FormTextInput formId="contact-subject" label="Subject"&gt;<br/>
+              &lt;FormTextAreaInput formId="contact-message" label="Message"&gt;<br/>
+              &lt;/FormContainer&gt;<br/>
+              &lt;SubmitButton type="submit" value="Submit"/&gt;<br/>
+              &lt;/form&gt;
             </code>
             <h4>Rendered element:</h4>
-            <div className="contact-form">
-              <form>
-                  <div className="form-container">
-                      <span className="form-wrapper">
-                          <label className="form-label" htmlFor="contact-first-name">First name*</label>
-                          <input className="form-input" type="text" id="contact-first-name"/>
-                      </span>
-                      <span className="form-wrapper">
-                          <label className="form-label" htmlFor="contact-last-name">Last name*</label>
-                          <input className="form-input" type="text" id="contact-last-name"/>
-                      </span>
-                      <label className="form-label" htmlFor="contact-email">Email*</label>
-                      <input className="form-input" type="text" id="contact-email"/>
-                      <label className="form-label" htmlFor="contact-subject">Subject</label>
-                      <input className="form-input" type="text" id="contact-subject"/>
-                      <label className="form-label" htmlFor="contact-message">Message*</label>
-                      <textarea className="form-input form-textarea" id="contact-message"/>
-                  </div>
-                  <input type="submit" className="button-nav button-md submit-button" value="Submit"/>
-              </form>
-            </div>
+            <ContactForm/>
           </section>
         </section>
       </div>

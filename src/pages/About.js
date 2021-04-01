@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { ContentOverlay, BackgroundOverlay, NavLink } from '../components/InteractiveElements';
 
@@ -33,6 +34,9 @@ const StarOverlayThree = styled(Image)`
 function About() {
     return (
         <div>
+            <Helmet>
+                <title>About | Freeman Liu</title>
+            </Helmet>
             <Row>
                 <Col md={7}>
                     <ContentOverlay>

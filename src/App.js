@@ -9,15 +9,12 @@ import MainNavbar from './components/MainNavbar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/index.css';
-import './css/interactive-elements.css';
-import './css/combined-elements.css';
 
 function App() {
   return (
     <div id="container">
       <Helmet>
-        <title>Freeman Liu Portfolio</title>
-        <meta content="Placeholder" name="description"/>
+        <title>Freeman Liu</title>
       </Helmet>
       <Router>
         <MainNavbar/>

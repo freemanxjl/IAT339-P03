@@ -65,6 +65,7 @@ a:hover, .link:hover{
 /* Classes Styling */
 .element{
   padding: 2rem;
+  margin-bottom: 2.5rem;
   border-top-width: 0.15rem;
   border-top-style: solid;
   border-top-color: #ffffff;

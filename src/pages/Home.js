@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Row, Image } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { ContentOverlay, BackgroundOverlay } from '../components/InteractiveElements';
 import Portfolio from '../components/Portfolio';
@@ -34,6 +35,9 @@ const StarOverlayThree = styled(Image)`
 function Home() {
     return (
         <div>
+            <Helmet>
+                <title>Portfolio | Freeman Liu</title>
+            </Helmet>
             <Row>
                 <Col md={6}>
                     <ContentOverlay>
