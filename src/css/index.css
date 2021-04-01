@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/ujb8bir.css");
+
 *{
   box-sizing: border-box;
 }
@@ -14,6 +16,7 @@ body {
   background: url('/src/asunderbackground-3.png');
   background-repeat: repeat-y;
   background-size: 100% auto;
+  background-color: #2a2829;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,10 +113,11 @@ footer{
 
 /* For the site title specifically */
 .site-title{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  font-weight: 900;
+  font-family: archivo-black, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2.5rem;
+  color: #ffffff;
 }
 
 .site-title:hover{

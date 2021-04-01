@@ -5,6 +5,7 @@ import { Link, NavLink as RouterNavLink } from 'react-router-dom';
 import ContactForm from '../components/CombinedElements';
 
 import TextLink, {FormRadioInput, FormTextInput, ImageLink, NavLink, ResetButton} from '../components/InteractiveElements';
+import ColorPallet from '../components/StyleGuideElements';
 
 function StyleGuide() {
     return (
@@ -243,6 +244,49 @@ function StyleGuide() {
             <h4>Rendered element:</h4>
             <ContactForm/>
           </section>
+        </section>
+        <section id="brand-components">
+          <h2>Brand Components</h2>
+
+          <section class="element">
+            <h3>Fonts</h3>
+            <p class="site-title">SITE TITLE, Archivo Black</p>
+            <h1>Header 1, Trick Asunder</h1>
+            <h2>Header 2, Trick Asunder</h2>
+            <h3>Header 3, Trick Asunder</h3>
+            <h4>Header 4, Trick Asunder</h4>
+            <p>Body, Trick Asunder</p>
+          </section>
+
+          <section class="element">
+            <h3>Color Pallettes</h3>
+            <ColorPallet color="#f82cbb" name="Shocking Pink"/>
+            <ColorPallet color="#40e0d0" name="Static Turqoise"/>
+            <ColorPallet color="#3a7a73" name="Myrtle Green"/>
+            <ColorPallet color="#b8232f" name="Upsdell Red"/>
+            <ColorPallet color="#ffffff" name="Pure Black"/>
+            <ColorPallet color="#000000" name="Pure White"/>
+          </section>
+        </section>
+        <section id="citations" className="element">
+          <h2>Citations</h2>
+          <ul>
+            <li>Pinhorn, Johnny. Designer. Kale, Ninad. Designer. 2014. <strong>Poppins [Font]</strong>. Retrieved from <a href="https://fonts.adobe.com/fonts/poppins">https://fonts.adobe.com/fonts/poppins</a></li>
+            <li>Adams, Vernon. Designer. 2017. <strong>Nunito [Font]</strong>. Retrieved from <a href="https://fonts.adobe.com/fonts/nunito">https://fonts.adobe.com/fonts/nunito</a></li>
+            <li>Liu, Freeman. Designer. 2021. <strong>matcha-cookies [Image]</strong>. Created by me</li>
+            <li>Liu, Freeman. Designer. 2021. <strong>red-velvet-cookies [Image]</strong>. Created by me</li>
+            <li>Liu, Freeman. Designer. 2021. <strong>moogi-logo [Image]</strong>. Created by me</li>
+            <li>Liu, Freeman. Designer. 2021. <strong>footprint [Image]</strong>. Created by me</li>
+            <li>Material Design. Designer. 2021. <strong>menu-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/">https://material.io/resources/icons/</a></li>
+            <li>Material Design. Designer. 2021. <strong>shopping_cart-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/">https://material.io/resources/icons/</a></li>
+            <li>Gault, Matthew. Writer. 2020. <strong>art-direction-AC [Image]</strong>. Retrieved from <a href="https://time.com/5804599/animal-crossing-new-horizons-review/">https://time.com/5804599/animal-crossing-new-horizons-review/</a></li>
+            <li>Greenwald, Will. Writer. 2020. <strong>art-direction-AC-2 [Image]</strong>. Retrieved from <a href="https://www.pcmag.com/reviews/animal-crossing-new-horizons-for-nintendo-switch">https://www.pcmag.com/reviews/animal-crossing-new-horizons-for-nintendo-switch</a></li>
+            <li>Parkin, Simon. Writer. 2020. <strong>art-direction-AC-3 [Image]</strong>. Retrieved from <a href="https://www.newyorker.com/culture/culture-desk/finding-connection-during-quarantine-with-animal-crossing-new-horizons">https://www.newyorker.com/culture/culture-desk/finding-connection-during-quarantine-with-animal-crossing-new-horizons</a></li>
+            <li>Luu, Daniel. Designer. 2020. <strong>art-direction-nookazon [Image]</strong>. Retrieved from <a href="https://nookazon.com/">https://nookazon.com/</a></li>
+            <li>Luu, Daniel. Designer. 2020. <strong>art-drection-nookazon-2 [Image]</strong>. Retrieved from <a href="https://nookazon.com/">https://nookazon.com/</a></li>
+            <li>Alemon. Designer. 2021. <strong>uniform-art-direction [Image]</strong>. Retrieved from <a href="https://www.vectorstock.com/royalty-free-vector/simple-blue-seamless-wavy-line-pattern-vector-22500202">https://www.vectorstock.com/royalty-free-vector/simple-blue-seamless-wavy-line-pattern-vector-22500202</a></li>
+            <li>Meereewee, Anuwat. Designer. 2021. <strong>uniform-art-direction-2 [Image]</strong>. Retrieved from <a href="https://www.vecteezy.com/vector-art/600288-ocean-waves-in-a-simple-cartoon-style">https://www.vecteezy.com/vector-art/600288-ocean-waves-in-a-simple-cartoon-style</a></li>
+          </ul>
         </section>
       </div>
     )};
