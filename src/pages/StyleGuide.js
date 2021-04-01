@@ -271,21 +271,11 @@ function StyleGuide() {
         <section id="citations" className="element">
           <h2>Citations</h2>
           <ul>
-            <li>Pinhorn, Johnny. Designer. Kale, Ninad. Designer. 2014. <strong>Poppins [Font]</strong>. Retrieved from <a href="https://fonts.adobe.com/fonts/poppins">https://fonts.adobe.com/fonts/poppins</a></li>
-            <li>Adams, Vernon. Designer. 2017. <strong>Nunito [Font]</strong>. Retrieved from <a href="https://fonts.adobe.com/fonts/nunito">https://fonts.adobe.com/fonts/nunito</a></li>
-            <li>Liu, Freeman. Designer. 2021. <strong>matcha-cookies [Image]</strong>. Created by me</li>
-            <li>Liu, Freeman. Designer. 2021. <strong>red-velvet-cookies [Image]</strong>. Created by me</li>
-            <li>Liu, Freeman. Designer. 2021. <strong>moogi-logo [Image]</strong>. Created by me</li>
-            <li>Liu, Freeman. Designer. 2021. <strong>footprint [Image]</strong>. Created by me</li>
-            <li>Material Design. Designer. 2021. <strong>menu-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/">https://material.io/resources/icons/</a></li>
-            <li>Material Design. Designer. 2021. <strong>shopping_cart-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/">https://material.io/resources/icons/</a></li>
-            <li>Gault, Matthew. Writer. 2020. <strong>art-direction-AC [Image]</strong>. Retrieved from <a href="https://time.com/5804599/animal-crossing-new-horizons-review/">https://time.com/5804599/animal-crossing-new-horizons-review/</a></li>
-            <li>Greenwald, Will. Writer. 2020. <strong>art-direction-AC-2 [Image]</strong>. Retrieved from <a href="https://www.pcmag.com/reviews/animal-crossing-new-horizons-for-nintendo-switch">https://www.pcmag.com/reviews/animal-crossing-new-horizons-for-nintendo-switch</a></li>
-            <li>Parkin, Simon. Writer. 2020. <strong>art-direction-AC-3 [Image]</strong>. Retrieved from <a href="https://www.newyorker.com/culture/culture-desk/finding-connection-during-quarantine-with-animal-crossing-new-horizons">https://www.newyorker.com/culture/culture-desk/finding-connection-during-quarantine-with-animal-crossing-new-horizons</a></li>
-            <li>Luu, Daniel. Designer. 2020. <strong>art-direction-nookazon [Image]</strong>. Retrieved from <a href="https://nookazon.com/">https://nookazon.com/</a></li>
-            <li>Luu, Daniel. Designer. 2020. <strong>art-drection-nookazon-2 [Image]</strong>. Retrieved from <a href="https://nookazon.com/">https://nookazon.com/</a></li>
-            <li>Alemon. Designer. 2021. <strong>uniform-art-direction [Image]</strong>. Retrieved from <a href="https://www.vectorstock.com/royalty-free-vector/simple-blue-seamless-wavy-line-pattern-vector-22500202">https://www.vectorstock.com/royalty-free-vector/simple-blue-seamless-wavy-line-pattern-vector-22500202</a></li>
-            <li>Meereewee, Anuwat. Designer. 2021. <strong>uniform-art-direction-2 [Image]</strong>. Retrieved from <a href="https://www.vecteezy.com/vector-art/600288-ocean-waves-in-a-simple-cartoon-style">https://www.vecteezy.com/vector-art/600288-ocean-waves-in-a-simple-cartoon-style</a></li>
+            <li>Gatti, Hector. Designer. 2017. <strong>Archivo Black [Font]</strong>. Retrieved from <a href="https://fonts.adobe.com/fonts/archivo-black" target="_blank" rel="noopener noreferrer">https://fonts.adobe.com/fonts/archivo-black</a></li>
+            <li>Liu, Freeman. Designer. 2019. <strong>Trick Asunder [Font]</strong>. Created by me</li>
+            <li>Liu, Freeman. Designer. 2017. <strong>favicon [Image]</strong>. Created by me</li>
+            <li>Liu, Freeman. Designer. 2019. <strong>background [Image]</strong>. Created by me</li>
+            <li>Material Design. Designer. 2021. <strong>menu-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/" target="_blank" rel="noopener noreferrer">https://material.io/resources/icons/</a></li>
           </ul>
         </section>
       </div>
