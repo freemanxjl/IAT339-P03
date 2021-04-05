@@ -2,9 +2,9 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { Link, NavLink as RouterNavLink } from 'react-router-dom';
-import ContactForm from '../components/CombinedElements';
+import ContactForm, {ImageLink} from '../components/CombinedElements';
 
-import TextLink, {FormRadioInput, FormTextInput, ImageLink, NavLink, ResetButton} from '../components/InteractiveElements';
+import TextLink, {FormRadioInput, FormTextInput, NavLink, ResetButton, TextShadow} from '../components/InteractiveElements';
 import ColorPallet from '../components/StyleGuideElements';
 
 function StyleGuide() {
@@ -15,7 +15,7 @@ function StyleGuide() {
         </Helmet>
         {/* INTERACTIVE ELEMENTS SECTION // */}
         <section id="interactive-elements">
-          <h2>Interactive Elements</h2>
+          <TextShadow><h2>Interactive Elements</h2></TextShadow>
           <section className="element">
             <h3>In-text Link</h3>
             <p>A link component to be used when within text</p>
@@ -107,27 +107,11 @@ function StyleGuide() {
             <FormRadioInput formId="form-radio-one" label="This is a radio button" name="form-radio" value="form-radio-one"/>
             <FormRadioInput formId="form-radio-two" label="This is also a radio button" name="form-radio" value="form-radio-two"/>
           </section>
-          <section className="element">
-            <h3>Image as a Link</h3>
-            <p>An image that when clicked navigates to a different page on the website. Mainly used as a navigation link to our portfolio projects</p>
-            <h4>Props:</h4>
-            <ul>
-              <li>imageName - name of image (without file extension .png) found within public folder</li>
-              <li>imageAlt - the alt tag for the image</li>
-              <li>text - the title to be overlayed on top of image</li>
-              <li>link - the route for a page within the site</li>
-            </ul>
-            <h4>Sample code:</h4>
-            <code>&lt;ImageLink imageName="grandis-library" imageAlt="Grandis Library" text="Sample Text" link="/style-guide"&gt;</code>
-            {/* Image used is made by me */}
-            <h4>Rendered element:</h4>
-            <ImageLink imageName="grandis-library" imageAlt="Grandis Library" text="Sample Text" link="/style-guide"/>
-          </section>
         </section>
         {/* // INTERACTIVE ELEMENTS SECTION */}
         {/* TEXT ELEMENTS SECTION // */}
         <section id="text_elements">
-          <h2>Text Elements</h2>
+          <TextShadow><h2>Text Elements</h2></TextShadow>
           <section className="element">
             <h3>Headings</h3>
             <h4>Sample code:</h4>
@@ -176,7 +160,25 @@ function StyleGuide() {
 
         {/* COMBINED ELEMENTS SECTION // */}
         <section id="combined-elements">
-          <h2>Combined Elements</h2>
+          <TextShadow><h2>Combined Elements</h2></TextShadow>
+
+          <section className="element">
+            <h3>Image as a Link</h3>
+            <p>An image that when clicked navigates to a different page on the website. Mainly used as a navigation link to our portfolio projects</p>
+            <h4>Props:</h4>
+            <ul>
+              <li>imageName - name of image (without file extension .png) found within public folder</li>
+              <li>imageAlt - the alt tag for the image</li>
+              <li>text - the title to be overlayed on top of image</li>
+              <li>link - the route for a page within the site</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>&lt;ImageLink imageName="grandis-library" imageAlt="Grandis Library" text="Grandis Library" link="/style-guide"&gt;</code>
+            {/* Image used is made by me */}
+            <h4>Rendered element:</h4>
+            <ImageLink imageName="grandis-library" imageAlt="Grandis Library" text="Grandis Library" link="/style-guide"/>
+          </section>
+
           <section className="element">
             <h3>Main Navigation</h3>
             <h4>Sample code:</h4>
@@ -246,7 +248,7 @@ function StyleGuide() {
           </section>
         </section>
         <section id="brand-components">
-          <h2>Brand Components</h2>
+          <TextShadow><h2>Brand Components</h2></TextShadow>
 
           <section class="element">
             <h3>Fonts</h3>
@@ -264,8 +266,8 @@ function StyleGuide() {
             <ColorPallet color="#40e0d0" name="Static Turqoise"/>
             <ColorPallet color="#3a7a73" name="Myrtle Green"/>
             <ColorPallet color="#b8232f" name="Upsdell Red"/>
-            <ColorPallet color="#ffffff" name="Pure Black"/>
-            <ColorPallet color="#000000" name="Pure White"/>
+            <ColorPallet color="#ffffff" name="Pure White"/>
+            <ColorPallet color="#000000" name="Pure Black"/>
           </section>
         </section>
         <section id="citations" className="element">

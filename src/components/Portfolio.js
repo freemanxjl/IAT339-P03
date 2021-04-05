@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ImageLink} from './InteractiveElements';
+import {ImageLink} from './CombinedElements';
 
 const PortfolioContainer = styled.div`
     display: flex;

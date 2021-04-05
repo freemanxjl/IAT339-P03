@@ -7,7 +7,7 @@ import SwiperCore, { Pagination, Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
-import { PortfolioHeader, NavLink, PortfolioContainer } from '../components/InteractiveElements';
+import { PortfolioHeader, NavLink, PortfolioContainer, TextShadow } from '../components/InteractiveElements';
 import { Helmet } from 'react-helmet';
 
 SwiperCore.use([Pagination, Navigation]);
@@ -19,8 +19,14 @@ function ProjectTwo() {
                 <title>Tamooki | Freeman Liu</title>
             </Helmet>
             <NavLink sm to="/">Back to porfolio</NavLink>
-            <PortfolioHeader>Tamooki</PortfolioHeader>
-            <h2>Role: Designer, Developer</h2>
+
+            <TextShadow>
+                <PortfolioHeader>Tamooki</PortfolioHeader>
+                <h2>Role: Designer, Developer</h2>
+                <h3>Skills: HTML5, CSS, Adobe Illustrator</h3>
+                <h4>January 2020</h4>
+            </TextShadow>
+
             <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-1.png`} style={{margin: "1rem 0 2rem 0"}}/>
             <p>Tamooki Style Guide
 The Tamooki Style Guide is an individual school project to create a style guide for a hypothetical company. The company I chose was a local cookie shop that specializes in popular flavours and ingredients like green tea, red velvet, and mochi. The goal of the project was to establish an understanding of style guides, design systems, and web development.</p>
