@@ -36,6 +36,24 @@ function ProjectOne() {
                     <li>Practice design knowledge and writing and communication skills</li>
                 </ul>
             </SectionOverlay>
+            <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination
+            loop
+            navigation
+            style={{margin: '2rem 0 2rem 0'}}
+            >
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-1.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-2.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-8.png`}/>
+                </SwiperSlide>
+            </Swiper>
             <SectionOverlay>
                 <h2>SquareSpace Website</h2>
                 <p>The original site was created using SquareSpace before it was completely recreated using React JS. The main challenges and goals of the site were to have:</p>
@@ -52,6 +70,24 @@ function ProjectOne() {
                 </ul>
                 <p>Overall, the SquareSpace site accomplishes all these however, the layout could be improved to display the information more effectively and compact. As well, the SquareSpace site lacks modularity as the layout is dictated by the framework. With the newly recreated site, React JS is used to improve on these problems.</p>
             </SectionOverlay>
+            <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination
+            loop
+            navigation
+            style={{margin: '2rem 0 2rem 0'}}
+            >
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-4.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-5.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-6.png`}/>
+                </SwiperSlide>
+            </Swiper>
             <SectionOverlay>
                 <h2>React JS Website</h2>
                 <p>To scale my website and gain better control of the layout and design, the site was rebuilt from scratch using React JS and Next.js</p>
@@ -74,28 +110,6 @@ function ProjectOne() {
                 <p>Overall, the project is successful in satisfying the main purposes for starting. I was able to gain confidence in my skills and as well learn and practice JavaScript.</p>
                 <p>The site has also received a huge amount of praise and positivity from the community for its practicality. As well, the site garners an average of 20k viewers monthly and has quickly become a staple to many users</p>
             </SectionOverlay>
-            <Image fluid src={`${process.env.PUBLIC_URL}/grandis-2.png`} style={{margin: '1rem 0 2rem 0'}}/>
-            <Image fluid src={`${process.env.PUBLIC_URL}/grandis-1.png`} style={{margin: '2rem 0 2rem 0'}}/>
-            
-            <Image fluid src={`${process.env.PUBLIC_URL}/grandis-7.png`} style={{margin: '2rem 0 2rem 0'}}/>
-            <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            pagination
-            loop
-            navigation
-            style={{margin: '2rem 0 2rem 0'}}
-            >
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-4.png`}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-5.png`}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-6.png`}/>
-                </SwiperSlide>
-            </Swiper>
 
         </PortfolioContainer>
     )
