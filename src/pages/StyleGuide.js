@@ -5,7 +5,7 @@ import { Link, NavLink as RouterNavLink } from 'react-router-dom';
 import ContactForm, {ImageLink} from '../components/CombinedElements';
 
 import TextLink, {FormRadioInput, FormTextInput, NavLink, ResetButton, TextShadow} from '../components/InteractiveElements';
-import ColorPallet from '../components/StyleGuideElements';
+import ColorPallet, {SamplePortfolioContent, StyleGuideSwiper} from '../components/StyleGuideElements';
 
 function StyleGuide() {
     return (
@@ -19,6 +19,10 @@ function StyleGuide() {
           <section className="element">
             <h3>In-text Link</h3>
             <p>A link component to be used when within text</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>TextLink</li>
+            </ul>
             <h4>Props:</h4>
             <ul>
               <li>link - URL for external websites</li>
@@ -43,6 +47,10 @@ function StyleGuide() {
               <li>md - medium</li>
               <li>lg - large</li>
             </ul>
+            <h4>React Components:</h4>
+            <ul>
+              <li>NavLink</li>
+            </ul>
             <h4>Props:</h4>
             <ul>
               <li>Utilizes same props as Link component from react-router-dom</li>
@@ -63,6 +71,11 @@ function StyleGuide() {
             <p>A Submit/Reset Button is a button for forms that when clicked will perform an action.</p>
             <p>The same sizings used for Navigation Links can be used for Submit/Reset buttons as well</p>
             <p>For the rendered element, NavLink is used as it is not within a form. For the proper component, substitute your form submit element with SubmitButton</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>ResetButton</li>
+              <li>SubmitButton</li>
+            </ul>
             <h4>Sample code:</h4>
             <code>
               &lt;ResetButton md to="/style-guide"&gt;Submit Button&lt;/a&gt;<br />
@@ -75,6 +88,10 @@ function StyleGuide() {
           <section className="element">
             <h3>Text Input Field with Label</h3>
             <p>A component for forms to insert a label and input of type text</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>FormTextInput</li>
+            </ul>
             <h4>Props:</h4>
             <ul>
               <li>formId - For the id to link label and input</li>
@@ -91,6 +108,10 @@ function StyleGuide() {
           <section className="element">
             <h3>Radio Button with Label</h3>
             <p>A component for forms to insert a label and input of type radio button</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>FormRadioInput</li>
+            </ul>
             <h4>Props:</h4>
             <ul>
               <li>formId - For the id to link label and input</li>
@@ -165,6 +186,10 @@ function StyleGuide() {
           <section className="element">
             <h3>Image as a Link</h3>
             <p>An image that when clicked navigates to a different page on the website. Mainly used as a navigation link to our portfolio projects</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>ImageLink</li>
+            </ul>
             <h4>Props:</h4>
             <ul>
               <li>imageName - name of image (without file extension .png) found within public folder</li>
@@ -181,6 +206,10 @@ function StyleGuide() {
 
           <section className="element">
             <h3>Main Navigation</h3>
+            <h4>React Components:</h4>
+            <ul>
+              <li>MainNavbar</li>
+            </ul>
             <h4>Sample code:</h4>
             <code>
               &lt;MainNavbar/&gt; Code below is what is found inside component<br/>
@@ -226,6 +255,10 @@ function StyleGuide() {
 
           <section className="element">
             <h3>Contact Form</h3>
+            <h4>React Components:</h4>
+            <ul>
+              <li>ContactForm</li>
+            </ul>
             <h4>Sample code:</h4>
             <code>
               &lt;ContactForm/&gt; Code below is what is found inside component<br/>
@@ -245,6 +278,55 @@ function StyleGuide() {
             </code>
             <h4>Rendered element:</h4>
             <ContactForm/>
+          </section>
+
+          <section className="element">
+            <h3>Portfolio Content</h3>
+            <h4>React Components:</h4>
+            <ul>
+              <li>SectionOverlay</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;SectionOverlay&gt;<br/>
+              &lt;h2&gt;Introduction&lt;/h2&gt;<br/>
+              &lt;p&gt;The Tamooki Style Guide is an individual school project to create a style guide for a hypothetical company. The company I chose was a local cookie shop that specializes in popular flavours and ingredients like green tea, red velvet, and mochi.&lt;/p&gt;<br/>
+              &lt;p&gt;The main goals of the project is to:&lt;/p&gt;<br/>
+              &lt;ul&gt;<br/>
+              &lt;li&gt;Establish an understanding of style guides and design systems&lt;/li&gt;<br/>
+              &lt;li&gt;Practice usage of proper HTML elements&lt;/li&gt;<br/>
+              &lt;li&gt;Practice and create responsive designs&lt;/li&gt;<br/>
+              &lt;/ul&gt;<br/>
+              &lt;/SectionOverlay&gt;
+            </code>
+            <h4>Rendered element:</h4>
+            <SamplePortfolioContent/>
+          </section>
+
+          <section className="element">
+            <h3>Swiper Component</h3>
+            <h4>React Components:</h4>
+            <ul>
+              <li>Swiper</li>
+              <li>SwiperSlide</li>
+              <li>Image</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;Swiper<br/>
+              spaceBetween="10"<br/>
+              slidesPerView="1"<br/>
+              pagination<br/>
+              loop<br/>
+              navigation&gt;<br/>
+              &lt;SwiperSlide&gt;<br/>
+              &lt;Image fluid src="..." alt="..."/&gt;<br/>
+              ...<br/>
+              &lt;/SwiperSlide&gt;<br/>
+              &lt;/Swiper&gt;
+            </code>
+            <h4>Rendered element:</h4>
+            <StyleGuideSwiper/>
           </section>
         </section>
         <section id="brand-components">

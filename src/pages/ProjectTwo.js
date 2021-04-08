@@ -38,6 +38,31 @@ function ProjectTwo() {
                 </ul>
             </SectionOverlay>
 
+            <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination
+            loop
+            navigation
+            style={{margin: '2rem 0 2rem 0'}}
+            >
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-8.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-9.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-10.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-11.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-1.png`}/>
+                </SwiperSlide>
+            </Swiper>
+
             <SectionOverlay>
                 <h2>Research</h2>
                 {/* <p>For this project, we adopted the Atomic Design methodology for how our elements and components are built. Starting from the smallest elements - the “Atoms”, elements like links, paragraphs, images, and buttons were designed first. From there, I combined the atoms together to build the “Molecules” such as the navbar, product item, checkout cart, and payment form. These components were then used to create “Template” pages to establish how the overall site would look and feel.</p> */}
@@ -52,6 +77,28 @@ function ProjectTwo() {
                 </ul>
                 <p>For this project, I wanted vibrant and soft colors with a relaxing tone. The colors I chose were bright and pastel colors such as turquoise, yellow, and white. For the typeface, I chose fonts that were thick and round. Overall, I wanted a colourful and playful branding and aesthetics that would entice customers.</p>
             </SectionOverlay>
+
+            <Swiper
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination
+            loop
+            navigation
+            style={{margin: '2rem 0 2rem 0'}}
+            >
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-6.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-12.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-2.png`}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-3.png`}/>
+                </SwiperSlide>
+            </Swiper>
 
             <SectionOverlay>
                 <h2>Style Guide</h2>
@@ -77,46 +124,6 @@ function ProjectTwo() {
                 <p>Overall, this project was a positive experience for me to to experiment with my usage of colors and try new ways to layout a site that I haven’t tried before. As well, I was able to push myself and express myself creatively with the graphics I created for my site.</p>
                 <p>However, if I could create this project again, I would experiment further as I felt I was still within my comfort zone while working on this project. I often use bright and light colors, I would like to try to use some darker and high contrast colors.</p>
             </SectionOverlay>
-        
-            <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-1.png`} style={{margin: "1rem 0 2rem 0"}}/>
-
-            <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            pagination
-            loop
-            navigation
-            style={{margin: '2rem 0 2rem 0'}}
-            >
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-6.png`}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-2.png`}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-3.png`}/>
-                </SwiperSlide>
-            </Swiper>
-
-            <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            pagination
-            loop
-            navigation
-            style={{margin: '2rem 0 2rem 0'}}
-            >
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-5.png`}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-4.png`}/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-7.png`}/>
-                </SwiperSlide>
-            </Swiper>
 
         </PortfolioContainer>
     )
