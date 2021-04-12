@@ -28,7 +28,7 @@ function ProjectOne() {
             
             <SectionOverlay>
                 <h2>Introduction</h2>
-                <p>Grandis Library is a website to unify information to create useful resources for new and returning players for the game MapleStory. Information in MapleStory is poorly documented and no official details are ever released. Users who were not present when a feature is introduced will not understand it or know it exists.</p>
+                <p>Grandis Library is a personal website project to unify information to create useful resources for new and returning players for the game MapleStory. Information in MapleStory is poorly documented and no official details are ever released. Users who were not present when a feature is introduced will not understand it or know it exists.</p>
                 <p>The main purpose of the project is to:</p>
                 <ul>
                     <li>Create a useful resource</li>
@@ -45,13 +45,13 @@ function ProjectOne() {
             style={{margin: '2rem 0 2rem 0'}}
             >
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-1.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-1/grandis-1.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-2.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-1/grandis-2.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-8.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-1/grandis-8.png`}/>
                 </SwiperSlide>
             </Swiper>
             <SectionOverlay>
@@ -79,13 +79,13 @@ function ProjectOne() {
             style={{margin: '2rem 0 2rem 0'}}
             >
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-4.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-1/grandis-4.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-5.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-1/grandis-5.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/grandis-6.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-1/grandis-6.png`}/>
                 </SwiperSlide>
             </Swiper>
             <SectionOverlay>
@@ -107,8 +107,8 @@ function ProjectOne() {
             </SectionOverlay>
             <SectionOverlay>
                 <h2>Reflection</h2>
-                <p>Overall, the project is successful in satisfying the main purposes for starting. I was able to gain confidence in my skills and as well learn and practice JavaScript.</p>
-                <p>The site has also received a huge amount of praise and positivity from the community for its practicality. As well, the site garners an average of 20k viewers monthly and has quickly become a staple to many users</p>
+                <p>Overall, the project is successful in satisfying the main purposes for starting. I was able to gain confidence in my skills and as well learn and practice JavaScript. As well, the site has received a huge amount of praise and positivity from the game's community for it's usefulness.</p>
+                <p>If I could redo this project, I would improve on the branding of the site. Currently the branding is quite monotonous and simplistic, I would like to experiment with something more colorful and experimental. As well, I would improve the site URL structure as it was inconsistent and created challenges while transitioning to the new site.</p>
             </SectionOverlay>
 
         </PortfolioContainer>

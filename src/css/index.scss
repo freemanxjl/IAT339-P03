@@ -1,23 +1,31 @@
 @import url("https://use.typekit.net/ujb8bir.css");
 
-*{
-  box-sizing: border-box;
-}
-
 @font-face{
   font-family: TrickAsunder;
   src: url('../trickasunder.ttf');
+}
+
+$iconicgrey: #2a2829;
+$purewhite: #ffffff;
+$pureblack: #000000;
+$codewhite: #eee;
+$shockingpink: #f82cbb;
+$greybrown: #a5a39d;
+$staticturqoise: #40e0d0;
+
+*{
+  box-sizing: border-box;
 }
 
 body {
   font-size: 1.5rem;
   font-family: TrickAsunder, sans-serif;
   overflow-wrap: break-word;
-  background: url('/src/asunderbackground-3.png');
+  background: url('../asunderbackground-3.png');
   background-repeat: repeat-y;
   background-size: 100% auto;
-  background-color: #2a2829;
-  color: #ffffff;
+  background-color: $iconicgrey;
+  color: $purewhite;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,7 +49,7 @@ li{
 }
 
 code{
-  background-color: #EEE;
+  background-color: $codewhite;
   padding: 0.5rem;
   display: block;
 }
@@ -52,17 +60,17 @@ p{
 
 a, .link{
   font-size: 1.5rem;
-  color: #ffffff;
+  color: $purewhite;
   text-decoration: underline;
   transition: none;
 }
 
 a:hover, .link:hover{
-  color: rgb(248, 44, 187);
+  color: $shockingpink
 }
 
 ::placeholder{
-  color: #a5a39d; 
+  color: $greybrown;
 }
 
 /* Classes Styling */
@@ -71,7 +79,7 @@ a:hover, .link:hover{
   margin-bottom: 2.5rem;
   border-top-width: 0.15rem;
   border-top-style: solid;
-  border-top-color: #ffffff;
+  border-top-color: $purewhite;
   background: rgba(0, 0, 0, 0.75);
 }
 
@@ -91,7 +99,7 @@ footer{
 }
 
 .navbar{
-  background: linear-gradient(to bottom, #000000 65%, transparent);
+  background: linear-gradient(to bottom, $pureblack 65%, transparent);
   padding-bottom: 2rem;
   opacity: 0.95;
 }
@@ -121,12 +129,12 @@ footer{
 }
 
 .site-title:hover{
-  color: turquoise;
+  color: $staticturqoise;
 }
 
 /* For the nav buttons like 'Home' and 'About' */
 .nav-link-button{
-  color: #ffffff;
+  color: $purewhite;
   padding: .2rem 0;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -138,7 +146,7 @@ footer{
 /* Underline property for the selected nav item and page */
 .underline{
   background-repeat: repeat-x;
-  background-image: linear-gradient(to right,#ffffff 100%,#ffffff 0);
+  background-image: linear-gradient(to right,$purewhite 100%,$purewhite 0);
   background-size: 1px 1px;
   background-position: 0 calc(100%);
 }
@@ -161,7 +169,7 @@ footer{
 
 /* Hamburger icon */
 .navbar-toggler-icon{
-  background-image: url("/src/menu-white-18dp.svg") !important;
+  background-image: url("../menu-white-18dp.svg") !important;
   background-size: 2.5rem 2.5rem;
 }
 
@@ -179,7 +187,7 @@ footer{
 
 @media(max-width: 991px){
   .navbar{
-    background: linear-gradient(to bottom, #000000 83%, transparent);
+    background: linear-gradient(to bottom, $pureblack 83%, transparent);
     padding-bottom: 2.8rem;
   }
 }

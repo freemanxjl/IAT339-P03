@@ -47,19 +47,19 @@ function ProjectTwo() {
             style={{margin: '2rem 0 2rem 0'}}
             >
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-8.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-8.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-9.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-9.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-10.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-10.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-11.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-11.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-1.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-1.png`}/>
                 </SwiperSlide>
             </Swiper>
 
@@ -87,16 +87,16 @@ function ProjectTwo() {
             style={{margin: '2rem 0 2rem 0'}}
             >
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-6.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-6.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-12.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-12.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-2.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-2.png`}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-3.png`}/>
+                    <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-3.png`}/>
                 </SwiperSlide>
             </Swiper>
 
@@ -121,7 +121,7 @@ function ProjectTwo() {
 
             <SectionOverlay>
                 <h2>Reflection</h2>
-                <p>Overall, this project was a positive experience for me to to experiment with my usage of colors and try new ways to layout a site that I haven’t tried before. As well, I was able to push myself and express myself creatively with the graphics I created for my site.</p>
+                <p>Overall, this project was a positive experience for me to experiment with my usage of colors and try new ways to layout a site that I haven’t tried before. I also learned how to create thoughtful design systems by designing the style guide As well, I was able to push myself and express myself creatively with the graphics I created for my site.</p>
                 <p>However, if I could create this project again, I would experiment further as I felt I was still within my comfort zone while working on this project. I often use bright and light colors, I would like to try to use some darker and high contrast colors.</p>
             </SectionOverlay>
 

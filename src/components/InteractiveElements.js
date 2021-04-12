@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import '../css/grid-image.css';
+import '../css/grid-image.scss';
 
 function TextLink({link, siteLink, children}) {
     return link ? <a href={link} target="_blank" rel="noopener noreferrer">{children}</a> : <Link to={siteLink}>{children}</Link>

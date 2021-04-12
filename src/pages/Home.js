@@ -46,7 +46,10 @@ function Home() {
                     </ContentOverlay>
                 </Col>
                 <Col md={6}>
-                    <Portfolio/>
+                    <ContentOverlay>
+                        <h1>Portfolio</h1>
+                        <Portfolio/>
+                    </ContentOverlay>
                 </Col>
             </Row>
             <BackgroundOverlay src={`${process.env.PUBLIC_URL}/swordofstars.png`}/>

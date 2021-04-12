@@ -8,7 +8,7 @@ import Routes from './special/Routes';
 import MainNavbar from './components/MainNavbar';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/index.css';
+import './css/index.scss';
 
 function App() {
   return (
