@@ -359,6 +359,7 @@ function StyleGuide() {
             <li>Liu, Freeman. Designer. 2019. <strong>Trick Asunder [Font]</strong>. Created by me</li>
             <li>Liu, Freeman. Designer. 2017. <strong>favicon [Image]</strong>. Created by me</li>
             <li>Liu, Freeman. Designer. 2019. <strong>background [Image]</strong>. Created by me</li>
+            <li>Liu, Freeman. Designer. 2020. <strong>background overlay [Image]</strong>. Created by me</li>
             <li>Material Design. Designer. 2021. <strong>menu-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/" target="_blank" rel="noopener noreferrer">https://material.io/resources/icons/</a></li>
           </ul>
         </section>
