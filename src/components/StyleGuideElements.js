@@ -44,16 +44,16 @@ export function StyleGuideSwiper(){
         style={{margin: '2rem 0 2rem 0'}}
         >
             <SwiperSlide>
-                <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-6.png`}/>
+                <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-6.png`}/>
             </SwiperSlide>
             <SwiperSlide>
-                <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-12.png`}/>
+                <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-12.png`}/>
             </SwiperSlide>
             <SwiperSlide>
-                <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-2.png`}/>
+                <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-2.png`}/>
             </SwiperSlide>
             <SwiperSlide>
-                <Image fluid src={`${process.env.PUBLIC_URL}/tamooki-3.png`}/>
+                <Image fluid src={`${process.env.PUBLIC_URL}/project-2/tamooki-3.png`}/>
             </SwiperSlide>
         </Swiper>
     );
