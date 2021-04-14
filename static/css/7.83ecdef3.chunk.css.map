@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/css/grid-image.scss"],"names":[],"mappings":"AACA,iEACI,SAAA,CACA,2BAAA","file":"7.83ecdef3.chunk.css","sourcesContent":["/* Removes overlay and text on hover for image links*/\r\n.grid-wrapper:hover .grid-overlay, .grid-wrapper:hover .grid-text{\r\n    opacity: 0;\r\n    transition: opacity ease 200ms;\r\n}"]}
