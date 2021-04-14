@@ -7,14 +7,14 @@ import SwiperCore, { Pagination, Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
-import { NavLink, PortfolioContainer, PortfolioHeader, SectionOverlay, TextShadow } from '../components/InteractiveElements';
+import { NavLink, PortfolioHeader, SectionOverlay, TextShadow } from '../components/InteractiveElements';
 import { Helmet } from 'react-helmet';
 
 SwiperCore.use([Pagination, Navigation]);
 
 function ProjectOne() {
     return (
-        <PortfolioContainer>
+        <div>
             <Helmet>
                 <title>Grandis Library | Freeman Liu</title>
             </Helmet>
@@ -111,7 +111,7 @@ function ProjectOne() {
                 <p>If I could redo this project, I would improve on the branding of the site. Currently the branding is quite monotonous and simplistic, I would like to experiment with something more colorful and experimental. As well, I would improve the site URL structure as it was inconsistent and created challenges while transitioning to the new site.</p>
             </SectionOverlay>
 
-        </PortfolioContainer>
+        </div>
     )
 };
 

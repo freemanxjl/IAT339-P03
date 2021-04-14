@@ -7,14 +7,14 @@ import SwiperCore, { Pagination, Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
-import { PortfolioHeader, NavLink, PortfolioContainer, TextShadow, SectionOverlay } from '../components/InteractiveElements';
+import { PortfolioHeader, NavLink, TextShadow, SectionOverlay } from '../components/InteractiveElements';
 import { Helmet } from 'react-helmet';
 
 SwiperCore.use([Pagination, Navigation]);
 
 function ProjectTwo() {
     return (
-        <PortfolioContainer>
+        <div>
             <Helmet>
                 <title>Tamooki | Freeman Liu</title>
             </Helmet>
@@ -125,7 +125,7 @@ function ProjectTwo() {
                 <p>However, if I could create this project again, I would experiment further as I felt I was still within my comfort zone while working on this project. I often use bright and light colors, I would like to try to use some darker and high contrast colors.</p>
             </SectionOverlay>
 
-        </PortfolioContainer>
+        </div>
     )
 };
 
