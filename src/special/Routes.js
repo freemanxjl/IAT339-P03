@@ -5,6 +5,7 @@ const Home = lazy(() => import('../pages/Home'));
 const ProjectOne = lazy(() => import('../pages/ProjectOne'));
 const ProjectTwo = lazy(() => import('../pages/ProjectTwo'));
 const StyleGuide = lazy(() => import('../pages/StyleGuide'));
+const Citations = lazy(() => import('../pages/Citations'));
 const About = lazy(() => import('../pages/About'));
 const Contact = lazy(() => import('../pages/Contact'));
 const NotFound = lazy(() => import('../pages/NotFound'));
@@ -18,6 +19,7 @@ function Routes(){
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/style-guide" component={StyleGuide}/>
+            <Route path="/citations" component={Citations}/>
             <Route component={NotFound}/>
         </Switch>
     )

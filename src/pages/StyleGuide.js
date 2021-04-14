@@ -21,7 +21,11 @@ function StyleGuide() {
             <li><AnchorLink smooth to="#interactive-elements" scroll={el => scrollWidthOffset(el)}>Interactive Elements</AnchorLink></li>
             <li><AnchorLink smooth to="#combined-elements" scroll={el => scrollWidthOffset(el)}>Combined Elements</AnchorLink></li>
             <li><AnchorLink smooth to="#brand-components" scroll={el => scrollWidthOffset(el)}>Brand Components</AnchorLink></li>
-            <li><AnchorLink smooth to="#citations" scroll={el => scrollWidthOffset(el)}>Citations</AnchorLink></li>
+          </ul>
+          <h3>Other Links</h3>
+          <ul>
+            <li><Link to="/citations">Citations Page</Link></li>
+            <li><a href="https://github.com/freemanxjl/IAT339-P03" target="_blank" rel="noreferrer noopener">GitHub Repository</a></li>
           </ul>
         </ContentOverlay>
         {/* INTERACTIVE ELEMENTS SECTION // */}
@@ -401,18 +405,6 @@ function StyleGuide() {
             <ColorPallet color="#ffffff" name="Pure White"/>
             <ColorPallet color="#000000" name="Pure Black"/>
           </section>
-        </section>
-        <TextShadow><AnchorLink smooth to="#top" scroll={el => scrollWidthOffset(el)}>Back to top</AnchorLink></TextShadow>
-        <section id="citations" className="element">
-          <h2>Citations</h2>
-          <ul>
-            <li>Gatti, Hector. Designer. 2017. <strong>Archivo Black [Font]</strong>. Retrieved from <a href="https://fonts.adobe.com/fonts/archivo-black" target="_blank" rel="noopener noreferrer">https://fonts.adobe.com/fonts/archivo-black</a></li>
-            <li>Liu, Freeman. Designer. 2019. <strong>Trick Asunder [Font]</strong>. Created by me</li>
-            <li>Liu, Freeman. Designer. 2017. <strong>favicon [Image]</strong>. Created by me</li>
-            <li>Liu, Freeman. Designer. 2019. <strong>background [Image]</strong>. Created by me</li>
-            <li>Liu, Freeman. Designer. 2020. <strong>background overlay [Image]</strong>. Created by me</li>
-            <li>Material Design. Designer. 2021. <strong>menu-white-18dp [Image]</strong>. Retrieved from <a href="https://material.io/resources/icons/" target="_blank" rel="noopener noreferrer">https://material.io/resources/icons/</a></li>
-          </ul>
         </section>
       </div>
     )};
