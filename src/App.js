@@ -1,6 +1,6 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 import { Helmet } from 'react-helmet';
-import { HashRouter as Router, useLocation } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 // import logo from './logo.svg';

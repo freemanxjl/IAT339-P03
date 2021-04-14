@@ -3,8 +3,9 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { Link, NavLink as RouterNavLink } from 'react-router-dom';
 import ContactForm, {ImageLink} from '../components/CombinedElements';
+import { HashLink as AnchorLink } from 'react-router-hash-link';
 
-import TextLink, {FormRadioInput, FormTextInput, NavLink, ResetButton, TextShadow} from '../components/InteractiveElements';
+import TextLink, {ContentOverlay, FormRadioInput, FormTextInput, NavLink, ResetButton, TextShadow} from '../components/InteractiveElements';
 import ColorPallet, {SamplePortfolioContent, StyleGuideSwiper} from '../components/StyleGuideElements';
 
 function StyleGuide() {
@@ -13,9 +14,22 @@ function StyleGuide() {
         <Helmet>
           <title>Style Guide | Freeman Liu</title>
         </Helmet>
+        <ContentOverlay>
+          <h1>Style Guide</h1>
+          <h2 id="top">Quick Jumps</h2>
+          <ul>
+            <li><AnchorLink smooth to="#interactive-elements" scroll={el => scrollWidthOffset(el)}>Interactive Elements</AnchorLink></li>
+            <li><AnchorLink smooth to="#combined-elements" scroll={el => scrollWidthOffset(el)}>Combined Elements</AnchorLink></li>
+            <li><AnchorLink smooth to="#brand-components" scroll={el => scrollWidthOffset(el)}>Brand Components</AnchorLink></li>
+            <li><AnchorLink smooth to="#citations" scroll={el => scrollWidthOffset(el)}>Citations</AnchorLink></li>
+          </ul>
+        </ContentOverlay>
         {/* INTERACTIVE ELEMENTS SECTION // */}
         <section id="interactive-elements">
-          <TextShadow><h2>Interactive Elements</h2></TextShadow>
+          <TextShadow>
+            <AnchorLink smooth to="#top" scroll={el => scrollWidthOffset(el)}>Back to top</AnchorLink>
+            <h2>Interactive Elements</h2>
+            </TextShadow>
           <section className="element">
             <h3>In-text Link</h3>
             <p>A link component to be used when within text</p>
@@ -181,7 +195,10 @@ function StyleGuide() {
 
         {/* COMBINED ELEMENTS SECTION // */}
         <section id="combined-elements">
-          <TextShadow><h2>Combined Elements</h2></TextShadow>
+          <TextShadow>
+            <AnchorLink smooth to="#top" scroll={el => scrollWidthOffset(el)}>Back to top</AnchorLink>
+            <h2>Combined Elements</h2>
+          </TextShadow>
 
           <section className="element">
             <h3>Image as a Link</h3>
@@ -330,7 +347,10 @@ function StyleGuide() {
           </section>
         </section>
         <section id="brand-components">
-          <TextShadow><h2>Brand Components</h2></TextShadow>
+          <TextShadow>
+            <AnchorLink smooth to="#top" scroll={el => scrollWidthOffset(el)}>Back to top</AnchorLink>
+            <h2>Brand Components</h2>
+          </TextShadow>
 
           <section class="element">
             <h3>Fonts</h3>
@@ -352,6 +372,7 @@ function StyleGuide() {
             <ColorPallet color="#000000" name="Pure Black"/>
           </section>
         </section>
+        <TextShadow><AnchorLink smooth to="#top" scroll={el => scrollWidthOffset(el)}>Back to top</AnchorLink></TextShadow>
         <section id="citations" className="element">
           <h2>Citations</h2>
           <ul>
@@ -365,5 +386,13 @@ function StyleGuide() {
         </section>
       </div>
     )};
+
+    //Used to scroll to anchor tags
+
+    const scrollWidthOffset = (el) => {
+      const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+      const yOffset = -150; 
+      window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
 
 export default StyleGuide;
