@@ -5,7 +5,7 @@ import { Link, NavLink as RouterNavLink } from 'react-router-dom';
 import ContactForm, {ImageLink} from '../components/CombinedElements';
 import { HashLink as AnchorLink } from 'react-router-hash-link';
 
-import TextLink, {ContentOverlay, FormRadioInput, FormTextInput, NavLink, ResetButton, TextShadow} from '../components/InteractiveElements';
+import TextLink, {ContentOverlay, FormRadioInput, FormTextInput, NavLink, PortfolioHeader, ResetButton, TextShadow} from '../components/InteractiveElements';
 import ColorPallet, {SamplePortfolioContent, StyleGuideSwiper} from '../components/StyleGuideElements';
 
 function StyleGuide() {
@@ -298,10 +298,39 @@ function StyleGuide() {
           </section>
 
           <section className="element">
-            <h3>Portfolio Content</h3>
+            <h3>Portfolio Header</h3>
+            <p>The header component of each portfolio project</p>
+            <p>The header is made up of the following components:</p>
+            <ul>
+              <li>PortfolioHeader - Title of project</li>
+              <li>h2 - Roles of project</li>
+              <li>h3 - Skills used in project</li>
+              <li>h4 - Date of project, either "Date - Date" or just "Date" depending on when project was finished</li>
+            </ul>
             <h4>React Components:</h4>
             <ul>
-              <li>SectionOverlay</li>
+              <li>PortfolioHeader - a stylized h1 tag with extra margin-top</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;PortfolioHeader&gt;Tamooki&lt;/PortfolioHeader&gt;<br/>
+              &lt;h2&gt;Role: Designer, Developer&lt;/h2&gt;<br/>
+              &lt;h3&gt;Skills: HTML5, CSS, Adobe Illustrator&lt;/h3&gt;<br/>
+              &lt;h4&gt;January 2020&lt;/h4&gt;<br/>
+            </code>
+            <h4>Rendered element:</h4>
+            <PortfolioHeader>Tamooki</PortfolioHeader>
+                <h2>Role: Designer, Developer</h2>
+                <h3>Skills: HTML5, CSS, Adobe Illustrator</h3>
+                <h4>January 2020</h4>
+          </section>
+
+          <section className="element">
+            <h3>Portfolio Content</h3>
+            The main content containers of a portfolio project. A portfolio project may contain multiple content containers
+            <h4>React Components:</h4>
+            <ul>
+              <li>SectionOverlay - styled div that adds a black box around content</li>
             </ul>
             <h4>Sample code:</h4>
             <code>
@@ -322,6 +351,7 @@ function StyleGuide() {
 
           <section className="element">
             <h3>Swiper Component</h3>
+            <p>A container to hold multiple images within a portfolio project. This container can be dragged with the cursor or using touch controls on a mobile device</p>
             <h4>React Components:</h4>
             <ul>
               <li>Swiper</li>
