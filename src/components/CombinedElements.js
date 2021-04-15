@@ -111,6 +111,7 @@ function ContactForm() {
     )
 }
 
+//For container found on the homepage that contains content and portfolio projects
 const MainTitle = styled.h1`
     font-size: 5rem;
     line-height: 5rem;
@@ -143,6 +144,7 @@ export function HomeContainer(){
     );
 }
 
+//For container found on about page that holds content and "Let's Chat" button
 export function AboutContainer({styleguide}){
     return(
         <Row>
@@ -159,6 +161,7 @@ export function AboutContainer({styleguide}){
     );
 }
 
+//For container found on contact page that holds content and contact form itself
 export function ContactContainer(){
     return(
         <ContentOverlay>

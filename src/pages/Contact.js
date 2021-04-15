@@ -1,9 +1,9 @@
 import React from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import ContactForm, { ContactContainer } from '../components/CombinedElements';
-import { ContentOverlay, BackgroundOverlay } from '../components/InteractiveElements';
+import { ContactContainer } from '../components/CombinedElements';
+import { BackgroundOverlay } from '../components/InteractiveElements';
 
 const StarOverlayOne = styled(Image)`
     position: absolute;
