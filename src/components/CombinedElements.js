@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Col, Image, Row } from 'react-bootstrap';
-import { ContentOverlay, FormTextAreaInput, FormTextInput, SubmitButton } from './InteractiveElements';
+import TextLink, { ContentOverlay, FormTextAreaInput, FormTextInput, SubmitButton, NavLink } from './InteractiveElements';
 import Portfolio from './Portfolio';
 
 //Container for the clickable portfolio image
@@ -118,7 +118,7 @@ const MainTitle = styled.h1`
 
 const MainCaption = styled.h2`
     font-size: 2.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
 `;
 
 const SecondaryTitle = styled.h2`
@@ -131,14 +131,46 @@ export function HomeContainer(){
         <ContentOverlay>
         <Row>
             <Col md={6}>
-                    <MainTitle>Hey! I'm Freeman</MainTitle>
-                    <MainCaption>I am an aspiring web developer passionate in creating engaging, simple, and creative designs.</MainCaption>
+                <MainTitle>Hey! I'm Freeman</MainTitle>
+                <MainCaption>I am an aspiring web developer passionate in creating engaging, simple, and creative designs.</MainCaption>
             </Col>
             <Col md={6}>
                 <SecondaryTitle>Projects</SecondaryTitle>
                 <Portfolio/>
             </Col>
         </Row>
+        </ContentOverlay>
+    );
+}
+
+export function AboutContainer({styleguide}){
+    return(
+        <Row>
+            <Col md={7}>
+                <ContentOverlay>
+                    <h1>Hello there, I'm Freeman</h1>
+                    <p>Nice to meet you! I am an aspiring web developer currently studying in Computing Science and Interactive Arts + Technology at Simon Fraser University. I am passionate about designing with intention and usability in mind. Simplicity is the name and functionality is the game. Human-centered design is the core of my philosophy and an important aspect to every project I have worked on.</p>
+                    {styleguide ? <NavLink lg to="/style-guide">Let's chat!</NavLink> : <NavLink lg to="/contact">Let's chat!</NavLink>}
+                </ContentOverlay>
+            </Col>
+            <Col md={4}>
+            </Col>
+        </Row>
+    );
+}
+
+export function ContactContainer(){
+    return(
+        <ContentOverlay>
+            <Row>
+                <Col sm={6}>
+                    <h1>I'd love to here from you, send me a message</h1>
+                    <p>To reach out, fill out this form or send me an email at <TextLink link="mailto:freemanxjl@gmail.com">freemanxjl@gmail.com</TextLink></p>
+                </Col>
+                <Col sm={6}>
+                    <ContactForm/>
+                </Col>
+            </Row>
         </ContentOverlay>
     );
 }

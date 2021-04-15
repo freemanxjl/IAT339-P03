@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import { Link, NavLink as RouterNavLink } from 'react-router-dom';
-import ContactForm, {ImageLink} from '../components/CombinedElements';
+import ContactForm, {AboutContainer, ContactContainer, HomeContainer, ImageLink} from '../components/CombinedElements';
 import { HashLink as AnchorLink } from 'react-router-hash-link';
 
 import TextLink, {ContentOverlay, FormRadioInput, FormTextInput, NavLink, PortfolioHeader, ResetButton, TextShadow} from '../components/InteractiveElements';
@@ -228,9 +228,12 @@ function StyleGuide() {
 
           <section className="element">
             <h3>Main Navigation</h3>
+            <p>The navbar found stickied to the top of the page</p>
             <h4>React Components:</h4>
             <ul>
-              <li>MainNavbar</li>
+              <li>MainNavbar - Renders all components of the navbar</li>
+              <li>Navbar - React Bootstrap component</li>
+              <li>Link &amp; NavLink - React Router Dom components</li>
             </ul>
             <h4>Sample code:</h4>
             <code>
@@ -277,9 +280,13 @@ function StyleGuide() {
 
           <section className="element">
             <h3>Contact Form</h3>
+            <p>The contact form portion found on the Contact page</p>
             <h4>React Components:</h4>
             <ul>
-              <li>ContactForm</li>
+              <li>ContactForm - Renders all the components for the contact form</li>
+              <li>FormContainer, FormWrapper - Used for layout &amp; grouping of forms</li>
+              <li>FormTextInput, FormTextAreaInput</li>
+              <li>SubmitButton</li>
             </ul>
             <h4>Sample code:</h4>
             <code>
@@ -300,6 +307,93 @@ function StyleGuide() {
             </code>
             <h4>Rendered element:</h4>
             <ContactForm/>
+          </section>
+
+          <section className="element">
+            <h3>Homepage Container</h3>
+            <p>The container found within the homepage that holds the content and portfolio projects</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>HomeContainer - Renders all the components for the container</li>
+              <li>ContentOverlay - styled div that adds a black box around content</li>
+              <li>Row &amp; Col - React Bootstrap components</li>
+              <li>MainTitle, MainCaption, SecondaryTitle - styled h1,h2,h3 tags for homepage</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;HomeContainer/&gt; Code below is what is found inside component<br/>
+              <br/>&lt;ContentOverlay&gt;<br/>
+              &lt;Row&gt;<br/>
+              &lt;Col md="6"&gt;<br/>
+              &lt;MainTitle&gt;Hey I'm Freeman!&lt;/MainTitle&gt;<br/>
+              &lt;MainCaption&gt;I am an aspiring web developer passionate in creating engaging, simple, and creative designs.&lt;/MainCaption&gt;<br/>
+              &lt;/Col&gt;<br/>
+              &lt;Col md="6"&gt;<br/>
+              &lt;SecondaryTitle&gt;Projects&lt;/SecondaryTitle&gt;<br/>
+              &lt;Portfolio/&gt;<br/>
+              &lt;/Col&gt;<br/>
+              &lt;/Row&gt;<br/>
+              &lt;/ContentOverlay&gt;
+            </code>
+            <h4>Rendered element:</h4>
+            <HomeContainer/>
+          </section>
+
+          <section className="element">
+            <h3>About Container</h3>
+            <p>The container found on the homepage that holds the content and "Let's Chat" button</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>HomeContainer - Renders all the components for the container</li>
+              <li>Row &amp; Col - React Bootstrap components</li>
+              <li>ContentOverlay - styled div that adds a black box around content</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;AboutContainer/&gt; Code below is what is found inside component<br/>
+              <br/>&lt;Row&gt;<br/>
+              &lt;Col md="7"&gt;<br/>
+              &lt;ContentOverlay&gt;<br/>
+              &lt;h1&gt;Hello there, I'm Freeman&lt;/h1&gt;<br/>
+              &lt;p&gt;Nice to meet you! I am an aspiring web developer currently studying in Computing Science and Interactive Arts + Technology at Simon Fraser University. I am passionate about designing with intention and usability in mind. Simplicity is the name and functionality is the game. Human-centered design is the core of my philosophy and an important aspect to every project I have worked on.&lt;/p&gt;<br/>
+              &lt;NavLink lg to="/contact"&gt;Let's chat!&lt;/NavLink&gt;<br/>
+              &lt;/ContentOverlay&gt;<br/>
+              &lt;/Col&gt;<br/>
+              &lt;Col md="4"&gt;<br/>
+              &lt;/Col&gt;<br/>
+              &lt;/Row&gt;
+            </code>
+            <h4>Rendered element:</h4>
+            <AboutContainer styleguide/>
+          </section>
+
+          <section className="element">
+            <h3>Contact Container</h3>
+            <p>The container found on the contact page that holds the content and contact form itself</p>
+            <h4>React Components:</h4>
+            <ul>
+              <li>ContactContainer - Renders all the components for the container</li>
+              <li>ContentOverlay - styled div that adds a black box around content</li>
+              <li>Row &amp; Col - React Bootstrap components</li>
+              <li>ContactForm</li>
+            </ul>
+            <h4>Sample code:</h4>
+            <code>
+              &lt;ContactContainer/&gt; Code below is what is found inside component<br/>
+              <br/>&lt;ContentOverlay&gt;<br/>
+              &lt;Row&gt;<br/>
+              &lt;Col md="6"&gt;<br/>
+              &lt;h1&gt;I'd love to here from you, send me a message&lt;/h1&gt;<br/>
+              &lt;p&gt;To reach out, fill out this form or send me an email at &lt;TextLink link="mailto:freemanxjl@gmail.com"&gt;freemanxjl@gmail.com&lt;/TextLink&gt;&lt;/p&gt;<br/>
+              &lt;/Col&gt;<br/>
+              &lt;Col md="6"&gt;<br/>
+              &lt;ContactForm/&gt;<br/>
+              &lt;/Col&gt;<br/>
+              &lt;/Row&gt;<br/>
+              &lt;/ContentOverlay&gt;
+            </code>
+            <h4>Rendered element:</h4>
+            <ContactContainer/>
           </section>
 
           <section className="element">
@@ -325,9 +419,9 @@ function StyleGuide() {
             </code>
             <h4>Rendered element:</h4>
             <PortfolioHeader>Tamooki</PortfolioHeader>
-                <h2>Role: Designer, Developer</h2>
-                <h3>Skills: HTML5, CSS, Adobe Illustrator</h3>
-                <h4>January 2020</h4>
+            <h2>Role: Designer, Developer</h2>
+            <h3>Skills: HTML5, CSS, Adobe Illustrator</h3>
+            <h4>January 2020</h4>
           </section>
 
           <section className="element">

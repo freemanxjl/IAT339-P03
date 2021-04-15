@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import ContactForm from '../components/CombinedElements';
+import ContactForm, { ContactContainer } from '../components/CombinedElements';
 import { ContentOverlay, BackgroundOverlay } from '../components/InteractiveElements';
 
 const StarOverlayOne = styled(Image)`
@@ -41,17 +41,7 @@ function Contact() {
             <Helmet>
                 <title>Contact | Freeman Liu</title>
             </Helmet>
-            <ContentOverlay>
-                <Row>
-                    <Col sm={6}>
-                        <h1>I'd love to here from you, send me a message</h1>
-                        <p>To reach out, fill out this form or send me an email at <a href="mailto: freemanxjl@gmail.com" target="_blank" rel="noopener noreferrer">freemanxjl@gmail.com</a></p>
-                    </Col>
-                    <Col sm={6}>
-                        <ContactForm/>
-                    </Col>
-                </Row>
-            </ContentOverlay>
+            <ContactContainer/>
             <BackgroundOverlay src={`${process.env.PUBLIC_URL}/swordofstars.png`}/>
             <StarOverlayOne src={`${process.env.PUBLIC_URL}/stars.png`}/>
             <StarOverlayTwo src={`${process.env.PUBLIC_URL}/stars.png`}/>
