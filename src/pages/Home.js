@@ -1,9 +1,9 @@
 import React from 'react';
-import { Col, Row, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { ContentOverlay, BackgroundOverlay } from '../components/InteractiveElements';
-import Portfolio from '../components/Portfolio';
+import { HomeContainer } from '../components/CombinedElements';
+import { BackgroundOverlay } from '../components/InteractiveElements';
 
 const StarOverlayOne = styled(Image)`
     position: absolute;
@@ -12,6 +12,7 @@ const StarOverlayOne = styled(Image)`
     scale: 125%;
     transform: rotate(100deg);
     z-index: -1;
+    opacity: 0.2;
 `;
 
 const StarOverlayTwo = styled(Image)`
@@ -21,6 +22,7 @@ const StarOverlayTwo = styled(Image)`
     scale: 50%;
     transform: rotate(20deg);
     z-index: -1;
+    opacity: 0.2;
 `;
 
 const StarOverlayThree = styled(Image)`
@@ -30,7 +32,10 @@ const StarOverlayThree = styled(Image)`
     scale: 80%;
     transform: rotate(35deg);
     z-index: -1;
+    opacity: 0.2;
 `;
+
+
 
 function Home() {
     return (
@@ -38,20 +43,7 @@ function Home() {
             <Helmet>
                 <title>Portfolio | Freeman Liu</title>
             </Helmet>
-            <Row>
-                <Col md={6}>
-                    <ContentOverlay>
-                        <h1>Hey! I'm Freeman</h1>
-                        <h2>I am an aspiring web developer passionate in creating engaging, simple, and creative designs.</h2>
-                    </ContentOverlay>
-                </Col>
-                <Col md={6}>
-                    <ContentOverlay>
-                        <h1>Portfolio</h1>
-                        <Portfolio/>
-                    </ContentOverlay>
-                </Col>
-            </Row>
+            <HomeContainer/>
             <BackgroundOverlay src={`${process.env.PUBLIC_URL}/swordofstars.png`}/>
             <StarOverlayOne src={`${process.env.PUBLIC_URL}/stars.png`}/>
             <StarOverlayTwo src={`${process.env.PUBLIC_URL}/stars.png`}/>

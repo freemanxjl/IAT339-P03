@@ -12,6 +12,7 @@ const StarOverlayOne = styled(Image)`
     scale: 125%;
     transform: rotate(100deg);
     z-index: -1;
+    opacity: 0.2;
 `;
 
 const StarOverlayTwo = styled(Image)`
@@ -21,6 +22,7 @@ const StarOverlayTwo = styled(Image)`
     scale: 50%;
     transform: rotate(20deg);
     z-index: -1;
+    opacity: 0.2;
 `;
 
 const StarOverlayThree = styled(Image)`
@@ -30,6 +32,7 @@ const StarOverlayThree = styled(Image)`
     scale: 80%;
     transform: rotate(35deg);
     z-index: -1;
+    opacity: 0.2;
 `;
 
 function Contact() {

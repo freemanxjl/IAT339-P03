@@ -5,13 +5,10 @@ import { TextShadow } from './InteractiveElements';
 import { Link } from 'react-router-dom';
 
 const FooterContainer = styled.footer`
-    margin: 31.5rem 0 0 0;
-    padding-top: 5rem;
+    margin: 20rem 0 0 0;
+    padding-top: 8rem;
+    padding-left: 2.5rem;
     background: linear-gradient(to top, #000000 75%, transparent);
-`;
-
-const FooterCol = styled(Col)`
-    margin-bottom: 1.5rem;
 `;
 
 const FooterText = styled.h6`
@@ -19,19 +16,30 @@ const FooterText = styled.h6`
     font-size: 1.5rem;
 `;
 
+const RouteLink = styled(Link)`
+    display: block;
+    width: fit-content;
+`;
+
+const AnchorLink = styled.a`
+    display: block;
+    width: fit-content;
+`;
+
 function Footer() {
     return (
         <FooterContainer>
             <Container>
                 <Row>
-                    <FooterCol md lg={4}>
+                    <Col md lg={4}>
                         <TextShadow>
                             <FooterText>[Freeman Liu 2021]</FooterText>
-                            <Link style={{display: 'block', width: 'fit-content'}} to="/style-guide">Style Guide</Link>
-                            <Link style={{display: 'block', width: 'fit-content'}} to="/citations">Citations</Link>
-                            <a style={{display: 'block', width: 'fit-content'}} href="https://github.com/freemanxjl/IAT339-P03" target="_blank" rel="noreferrer noopener">GitHub Repository</a>
+                            <RouteLink to="/style-guide">Style Guide</RouteLink>
+                            <RouteLink to="/citations">Citations</RouteLink>
+                            <AnchorLink href="https://github.com/freemanxjl/IAT339-P03" target="_blank" rel="noreferrer noopener">GitHub Repository</AnchorLink>
+                            <AnchorLink href="https://cargocollective.com/freemanliu" target="_blank" rel="noreferrer noopener">Original Portfolio</AnchorLink>
                         </TextShadow>
-                    </FooterCol>
+                    </Col>
                 </Row>
             </Container>
         </FooterContainer>

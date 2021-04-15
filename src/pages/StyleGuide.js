@@ -26,6 +26,7 @@ function StyleGuide() {
           <ul>
             <li><Link to="/citations">Citations Page</Link></li>
             <li><a href="https://github.com/freemanxjl/IAT339-P03" target="_blank" rel="noreferrer noopener">GitHub Repository</a></li>
+            <li><a href="https://cargocollective.com/freemanliu" target="_blank" rel="noreferrer noopener">Original Portfolio</a></li>
           </ul>
         </ContentOverlay>
         {/* INTERACTIVE ELEMENTS SECTION // */}

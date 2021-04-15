@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Image } from 'react-bootstrap';
-import { FormTextAreaInput, FormTextInput, SubmitButton } from './InteractiveElements';
+import { Col, Image, Row } from 'react-bootstrap';
+import { ContentOverlay, FormTextAreaInput, FormTextInput, SubmitButton } from './InteractiveElements';
+import Portfolio from './Portfolio';
 
 //Container for the clickable portfolio image
 const GridWrapper = styled.div`
@@ -10,7 +11,7 @@ const GridWrapper = styled.div`
     width: fit-content;
     height: auto;
     position: relative;
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
     z-index: 1;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -108,6 +109,38 @@ function ContactForm() {
             <SubmitButton type="submit" value="Submit"/>
         </form>
     )
+}
+
+const MainTitle = styled.h1`
+    font-size: 5rem;
+    line-height: 5rem;
+`;
+
+const MainCaption = styled.h2`
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+`;
+
+const SecondaryTitle = styled.h2`
+    font-size: 4rem;
+    line-height: 5rem;
+`;
+
+export function HomeContainer(){
+    return(
+        <ContentOverlay>
+        <Row>
+            <Col md={6}>
+                    <MainTitle>Hey! I'm Freeman</MainTitle>
+                    <MainCaption>I am an aspiring web developer passionate in creating engaging, simple, and creative designs.</MainCaption>
+            </Col>
+            <Col md={6}>
+                <SecondaryTitle>Projects</SecondaryTitle>
+                <Portfolio/>
+            </Col>
+        </Row>
+        </ContentOverlay>
+    );
 }
 
 export default ContactForm;
