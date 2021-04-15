@@ -12,6 +12,8 @@ import { SectionOverlay } from './InteractiveElements';
 
 SwiperCore.use([Pagination, Navigation]);
 
+//This file holds elements found only in the style guide
+
 const PalleteWrapper = styled.div`
     display: inline-block;
     margin: 0 1rem 0 1rem;

@@ -5,10 +5,12 @@ import styled from 'styled-components';
 
 import '../css/grid-image.scss';
 
+//A link within text, can be linked to an external site or internal route
 function TextLink({link, siteLink, children}) {
     return link ? <a href={link} target="_blank" rel="noopener noreferrer">{children}</a> : <Link to={siteLink}>{children}</Link>
 }
 
+//Button element
 export const NavLink = styled(Link)`
     color: #ffffff;
     background-color: #3a7a73;
@@ -118,6 +120,7 @@ const FormTextArea = styled.textarea`
     }
 `;
 
+//Component to create a label and text input
 export function FormTextInput({formId, label, placeholder}){
     return(
         <span>
@@ -127,6 +130,7 @@ export function FormTextInput({formId, label, placeholder}){
     )
 }
 
+//Component to create a label and radio input
 export function FormRadioInput({formId, label, name, value}){
     return(
         <div>
@@ -136,6 +140,7 @@ export function FormRadioInput({formId, label, name, value}){
     )
 }
 
+//Component to create a label and text area
 export function FormTextAreaInput({formId, label, placeholder}){
     return(
         <div>
@@ -145,22 +150,26 @@ export function FormTextAreaInput({formId, label, placeholder}){
     )
 }
 
+//Container to wrap around content to add a black background
 export const ContentOverlay = styled.div`
     background: rgba(0,0,0,0.75);
     padding: 2rem;
     margin-bottom: 2rem;
 `;
 
+//Container to wrap sections to add a black background
 export const SectionOverlay = styled.section`
     background: rgba(0,0,0,0.75);
     padding: 2rem;
     margin-bottom: 2rem;
 `;
 
+//Container to add text shadow to wrapped text elements
 export const TextShadow = styled.div`
   text-shadow: 0.25rem 0.25rem 0.5rem #000000;
 `;
 
+//Special container for the homepage
 export const HomeContentOverlay = styled.div`
     @media( max-width: 575px){
         background: rgba(0,0,0,0.75);
@@ -168,6 +177,7 @@ export const HomeContentOverlay = styled.div`
     }
 `;
 
+//Component to be used for the character displayed on several pages
 export const BackgroundOverlay = styled(Image)`
     position: fixed;
     bottom: 0;
@@ -179,6 +189,7 @@ export const BackgroundOverlay = styled(Image)`
     }
 `;
 
+//Used on portfolio pages for the title
 export const PortfolioHeader = styled.h1`
     margin-top: 1rem;
 `;

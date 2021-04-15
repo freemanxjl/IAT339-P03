@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-// import logo from '../logo.png';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
-/*
-    Main navbar component for our site
-    Created by: Ikasuu, Fall 2020
-*/
+
 
 //Check if homepage for NavLink use, else we will always have an underline under 'Home'
 const checkActive = (match, location) => {

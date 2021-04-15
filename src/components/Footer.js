@@ -4,11 +4,6 @@ import styled from 'styled-components';
 import { TextShadow } from './InteractiveElements';
 import { Link } from 'react-router-dom';
 
-/*
-    Footer component
-    Created by: Ikasuu, Winter 2020
-*/
-
 const FooterContainer = styled.footer`
     margin: 31.5rem 0 0 0;
     padding-top: 5rem;

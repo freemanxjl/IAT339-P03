@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
 import { FormTextAreaInput, FormTextInput, SubmitButton } from './InteractiveElements';
 
+//Container for the clickable portfolio image
 const GridWrapper = styled.div`
     max-width: 100%;
     width: fit-content;
@@ -20,6 +21,7 @@ const GridWrapper = styled.div`
     0 100px 80px rgba(0, 0, 0, 0.12);
 `;
 
+//Gray overlay over portfolio image that disappears when hovered over
 const GridOverlay = styled.div`
     position: absolute;
     top: 0;
@@ -31,6 +33,7 @@ const GridOverlay = styled.div`
     z-index: 2;
 `;
 
+//Container for the title within the portfolio image, disappears when hovered over
 const GridText = styled.div`
     color: #ffffff;
     position: absolute;
@@ -44,6 +47,7 @@ const GridText = styled.div`
     }
 `;
 
+//Actual text itself within the portfolio image
 const GridTitle = styled.h3`
     margin-top: 0;
     padding-top: 0;
@@ -57,6 +61,7 @@ const GridTitle = styled.h3`
     }
 `;
 
+//Component that utilizes all the elements above to create a single portfolio image
 export function ImageLink({imageName, imageAlt, text, link}){
     return(
         <GridWrapper className="grid-wrapper">
@@ -71,10 +76,12 @@ export function ImageLink({imageName, imageAlt, text, link}){
     )
 }
 
+//Container for forms
 const FormContainer = styled.div`
     padding: 1rem 0 2rem 0;
 `;
 
+//A wrapper to group similar elements in a form
 const FormWrapper = styled.span`
     display: inline-block;
     margin: 0.25rem 1rem 0.25rem 0;
